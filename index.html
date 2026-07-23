@@ -561,8 +561,96 @@
       <span>© 2026 Advanced English Learners' Club, Ramco Institute of Technology. All rights reserved.</span>
       <span>Formerly English Enhancement League</span>
     </div>
+
+    <!-- ===== DEVELOPER CREDITS ===== -->
+    <div class="dev-credits">
+      <span class="dev-credits-label"><i class="fa-solid fa-code"></i> Website Developed &amp; Launched By</span>
+      <ul class="dev-credits-list">
+        <li>
+          <div class="dev-avatar"><img src="assets/img/developers/sanjev kumar.jpg" alt="Sanjev Kumar" onerror="this.parentElement.innerHTML='SK'"></div>
+          <span class="dev-name">Sanjev Kumar</span><span class="dev-meta">3rd Year, EEE</span>
+        </li>
+        <li>
+          <div class="dev-avatar"><img src="assets/img/developers/krishnaveni.jpeg" alt="S J Krishnaveni" onerror="this.parentElement.innerHTML='SJK'"></div>
+          <span class="dev-name">S J Krishnaveni</span><span class="dev-meta">3rd Year, CSE</span>
+        </li>
+        <!-- To add another developer, copy the block below and edit the photo path / name / dept:
+        <li>
+          <div class="dev-avatar"><img src="assets/img/dev-yourphoto.jpg" alt="Full Name" onerror="this.parentElement.innerHTML='XX'"></div>
+          <span class="dev-name">Full Name</span><span class="dev-meta">Year, Department</span>
+        </li>
+        If you don't have a photo yet, just omit the <div class="dev-avatar">...</div> line — initials/icon will show automatically. -->
+        -->
+      </ul>
+    </div>
   </div>
 </footer>
+
+<style>
+.dev-credits{
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  text-align:center;
+}
+.dev-credits-label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  margin-bottom:10px;
+}
+.dev-credits-list{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px 22px;
+  margin:0;
+  padding:0;
+}
+.dev-credits-list li{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  line-height:1.3;
+  width:110px;
+}
+.dev-avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-bottom:8px;
+  background:rgba(255,255,255,.08);
+  border:2px solid rgba(201,182,156,.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  font-size:.9rem;
+  color:var(--beige-dark,#c9b69c);
+}
+.dev-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.dev-name{
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  font-size:.85rem;
+  color:var(--beige-dark,#c9b69c);
+}
+.dev-meta{
+  font-size:.72rem;
+  color:rgba(255,255,255,.5);
+}
+</style>
 
 <button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 
