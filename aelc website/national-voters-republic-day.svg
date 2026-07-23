@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgNV" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1428"/>
+      <stop offset="100%" stop-color="#132548"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bgNV)"/>
+  <!-- ballot box -->
+  <g transform="translate(150,155)">
+    <rect x="-50" y="-10" width="100" height="60" rx="6" fill="#F4EFE6" opacity="0.95"/>
+    <rect x="-50" y="-10" width="100" height="60" rx="6" fill="none" stroke="#C9A227" stroke-width="2"/>
+    <rect x="-45" y="-24" width="90" height="18" rx="3" fill="#EAE2D0"/>
+    <rect x="-22" y="-20" width="44" height="6" rx="3" fill="#0A1428"/>
+    <!-- ballot slip going in -->
+    <rect x="-8" y="-45" width="16" height="26" fill="#F4C542" transform="rotate(-10 0 -30)"/>
+    <line x1="-4" y1="-38" x2="4" y2="-38" stroke="#0A1428" stroke-width="1.5" transform="rotate(-10 0 -30)"/>
+  </g>
+  <!-- spell bee letter tiles -->
+  <g font-family="Georgia, serif" font-weight="bold" font-size="20">
+    <rect x="255" y="90" width="30" height="30" rx="5" fill="#F4C542"/>
+    <text x="270" y="112" text-anchor="middle" fill="#0A1428">S</text>
+    <rect x="290" y="100" width="30" height="30" rx="5" fill="#E7B84B"/>
+    <text x="305" y="122" text-anchor="middle" fill="#0A1428">P</text>
+    <rect x="325" y="90" width="30" height="30" rx="5" fill="#F4C542"/>
+    <text x="340" y="112" text-anchor="middle" fill="#0A1428">L</text>
+    <rect x="272" y="135" width="30" height="30" rx="5" fill="#E7B84B"/>
+    <text x="287" y="157" text-anchor="middle" fill="#0A1428">B</text>
+    <rect x="307" y="135" width="30" height="30" rx="5" fill="#F4C542"/>
+    <text x="322" y="157" text-anchor="middle" fill="#0A1428">E</text>
+  </g>
+  <text x="200" y="230" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#F4EFE6" letter-spacing="1.5">VOTERS DAY &amp; REPUBLIC DAY</text>
+</svg>

@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | AELC — Ramco Institute of Technology</title>
+<meta name="description" content="A masonry gallery of AELC events — filterable by workshop, seminar, competition, outreach and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/logo.jpeg">
+<style>
+.gallery-thumb{background-size:cover;background-position:center;border-radius:14px;}
+</style>
+</head>
+<body>
+
+<div class="loader-aelc">
+  <img src="assets/img/logo.jpeg" alt="AELC" class="loader-logo">
+  <div class="loader-bar"></div>
+</div>
+<div class="scroll-progress"></div>
+
+<nav class="aelc-nav">
+  <div class="container-aelc">
+    <a href="index.html" class="aelc-brand">
+      <img src="assets/img/logo.jpeg" alt="AELC Logo">
+      <span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span>
+    </a>
+    <ul class="aelc-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Committee</a></li><li><a href="hall-of-fame.html">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="communication-hub.html">Comm. Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="aelc-nav-actions">
+      <div class="icon-btn search-toggle" title="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="icon-btn theme-toggle" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></div>
+      <div class="icon-btn nav-toggle" title="Menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-overlay"></div>
+<div class="mobile-panel">
+  <span class="mobile-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  <div class="aelc-brand"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b></span></div>
+  <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Executive Committee</a></li><li><a href="hall-of-fame.html">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="communication-hub.html">Communication Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="resources.html">Resources</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="contact.html">Contact</a></li></ul>
+</div>
+<div class="search-modal" style="position:fixed;inset:0;background:rgba(10,20,40,.85);backdrop-filter:blur(6px);z-index:1300;display:none;align-items:flex-start;justify-content:center;">
+  <div style="width:100%;max-width:640px;margin-top:14vh;padding:0 20px;">
+    <div style="display:flex;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;gap:14px;">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--accent-text);"></i>
+      <input type="text" placeholder="Search events, resources, testimonials…" style="border:none;outline:none;flex:1;font-family:'Open Sans';font-size:1rem;">
+      <i class="fa-solid fa-xmark search-close" style="cursor:pointer;color:var(--accent-text);"></i>
+    </div>
+  </div>
+</div>
+<style>.search-modal.open{display:flex !important;}</style>
+
+<header class="page-hero">
+  <div class="container-aelc">
+    <div class="breadcrumb-aelc"><a href="index.html">Home</a> &nbsp;/&nbsp; Gallery</div>
+    <span class="hero-badge">Moments captured</span>
+    <h1 class="mt-3">Gallery</h1>
+    <p class="mt-3">A Pinterest-style archive of every workshop, seminar, competition and outreach moment — filterable and full-screen ready.</p>
+  </div>
+</header>
+
+<section class="section-tight">
+  <div class="container-aelc">
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-2" data-aos="fade-up">
+      <button class="filter-btn btn-aelc btn-navy-outline active" data-filter="all" style="padding:8px 20px;">All</button>
+      <button class="filter-btn btn-aelc btn-navy-outline" data-filter="workshop" style="padding:8px 20px;">Workshop</button>
+      <button class="filter-btn btn-aelc btn-navy-outline" data-filter="seminar" style="padding:8px 20px;">Seminar</button>
+      <button class="filter-btn btn-aelc btn-navy-outline" data-filter="competition" style="padding:8px 20px;">Competition</button>
+      <button class="filter-btn btn-aelc btn-navy-outline" data-filter="outreach" style="padding:8px 20px;">Outreach</button>
+      <button class="filter-btn btn-aelc btn-navy-outline" data-filter="others" style="padding:8px 20px;">Others</button>
+    </div>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container-aelc">
+    <div class="row" id="galleryGrid">
+      <!-- Item 1 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit 2022-23.png');" data-bs-toggle="modal" data-bs-target="#lightbox0"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit 2022 23</p>
+      </div>
+      <div class="modal fade" id="lightbox0" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit 2022-23.png" alt="Anchorit 2022 23" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (1).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox1"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (1).jpg" alt="Anchorit24 25 (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (1).png');" data-bs-toggle="modal" data-bs-target="#lightbox2"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (1).png" alt="Anchorit24 25 (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (10).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox3"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (10)</p>
+      </div>
+      <div class="modal fade" id="lightbox3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (10).JPG" alt="Anchorit24 25 (10)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (2).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox4"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (2)</p>
+      </div>
+      <div class="modal fade" id="lightbox4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (2).jpg" alt="Anchorit24 25 (2)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (3).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox5"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (3)</p>
+      </div>
+      <div class="modal fade" id="lightbox5" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (3).jpg" alt="Anchorit24 25 (3)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (4).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox6"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (4)</p>
+      </div>
+      <div class="modal fade" id="lightbox6" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (4).JPG" alt="Anchorit24 25 (4)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (5).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox7"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (5)</p>
+      </div>
+      <div class="modal fade" id="lightbox7" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (5).JPG" alt="Anchorit24 25 (5)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (6).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox8"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (6)</p>
+      </div>
+      <div class="modal fade" id="lightbox8" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (6).jpg" alt="Anchorit24 25 (6)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 10 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (7).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox9"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (7)</p>
+      </div>
+      <div class="modal fade" id="lightbox9" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (7).JPG" alt="Anchorit24 25 (7)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 11 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (8).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox10"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (8)</p>
+      </div>
+      <div class="modal fade" id="lightbox10" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (8).JPG" alt="Anchorit24 25 (8)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 12 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24-25 (9).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox11"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24 25 (9)</p>
+      </div>
+      <div class="modal fade" id="lightbox11" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24-25 (9).JPG" alt="Anchorit24 25 (9)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 13 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/anchorit24.png');" data-bs-toggle="modal" data-bs-target="#lightbox12"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Anchorit24</p>
+      </div>
+      <div class="modal fade" id="lightbox12" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/anchorit24.png" alt="Anchorit24" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 14 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/college competition.png');" data-bs-toggle="modal" data-bs-target="#lightbox13"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · College Competition</p>
+      </div>
+      <div class="modal fade" id="lightbox13" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/college competition.png" alt="College Competition" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 15 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/DSCN0037.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox14"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · DSCN0037</p>
+      </div>
+      <div class="modal fade" id="lightbox14" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/DSCN0037.JPG" alt="DSCN0037" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 16 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/DSCN0038.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox15"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · DSCN0038</p>
+      </div>
+      <div class="modal fade" id="lightbox15" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/DSCN0038.JPG" alt="DSCN0038" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 17 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/DSCN0039.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox16"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · DSCN0039</p>
+      </div>
+      <div class="modal fade" id="lightbox16" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/DSCN0039.JPG" alt="DSCN0039" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 18 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/DSCN0071.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox17"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · DSCN0071</p>
+      </div>
+      <div class="modal fade" id="lightbox17" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/DSCN0071.JPG" alt="DSCN0071" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 19 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="outreach" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/english flair.png');" data-bs-toggle="modal" data-bs-target="#lightbox18"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">outreach · English Flair</p>
+      </div>
+      <div class="modal fade" id="lightbox18" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/english flair.png" alt="English Flair" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 20 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/Finals 1.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox19"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Finals 1</p>
+      </div>
+      <div class="modal fade" id="lightbox19" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/Finals 1.jpg" alt="Finals 1" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 21 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/Finals.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox20"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Finals</p>
+      </div>
+      <div class="modal fade" id="lightbox20" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/Finals.jpg" alt="Finals" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 22 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/IMG_5740.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox21"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · IMG 5740</p>
+      </div>
+      <div class="modal fade" id="lightbox21" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/IMG_5740.JPG" alt="IMG 5740" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 23 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/IMG_5741.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox22"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · IMG 5741</p>
+      </div>
+      <div class="modal fade" id="lightbox22" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/IMG_5741.JPG" alt="IMG 5741" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 24 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/IMG_5742.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox23"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · IMG 5742</p>
+      </div>
+      <div class="modal fade" id="lightbox23" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/IMG_5742.JPG" alt="IMG 5742" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 25 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/IMG_5743.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox24"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · IMG 5743</p>
+      </div>
+      <div class="modal fade" id="lightbox24" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/IMG_5743.JPG" alt="IMG 5743" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 26 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/IMG_5744.JPG');" data-bs-toggle="modal" data-bs-target="#lightbox25"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · IMG 5744</p>
+      </div>
+      <div class="modal fade" id="lightbox25" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/IMG_5744.JPG" alt="IMG 5744" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 27 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/Induction program 22-23.png');" data-bs-toggle="modal" data-bs-target="#lightbox26"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · Induction Program 22 23</p>
+      </div>
+      <div class="modal fade" id="lightbox26" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/Induction program 22-23.png" alt="Induction Program 22 23" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 28 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/INTERDEPARTMENTAL SCRABBLE TOURNAMENT.png');" data-bs-toggle="modal" data-bs-target="#lightbox27"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · INTERDEPARTMENTAL SCRABBLE TOURNAMENT</p>
+      </div>
+      <div class="modal fade" id="lightbox27" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/INTERDEPARTMENTAL SCRABBLE TOURNAMENT.png" alt="INTERDEPARTMENTAL SCRABBLE TOURNAMENT" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 29 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="workshop" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/resume building workshop.png');" data-bs-toggle="modal" data-bs-target="#lightbox28"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">workshop · Resume Building Workshop</p>
+      </div>
+      <div class="modal fade" id="lightbox28" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/resume building workshop.png" alt="Resume Building Workshop" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 30 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (1).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox29"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox29" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (1).JPG" alt="Scrabble (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 31 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (2).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox30"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (2)</p>
+      </div>
+      <div class="modal fade" id="lightbox30" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (2).JPG" alt="Scrabble (2)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 32 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (3).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox31"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (3)</p>
+      </div>
+      <div class="modal fade" id="lightbox31" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (3).JPG" alt="Scrabble (3)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 33 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (4).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox32"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (4)</p>
+      </div>
+      <div class="modal fade" id="lightbox32" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (4).JPG" alt="Scrabble (4)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 34 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (5).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox33"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (5)</p>
+      </div>
+      <div class="modal fade" id="lightbox33" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (5).JPG" alt="Scrabble (5)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 35 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (6).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox34"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (6)</p>
+      </div>
+      <div class="modal fade" id="lightbox34" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (6).JPG" alt="Scrabble (6)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 36 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (7).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox35"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (7)</p>
+      </div>
+      <div class="modal fade" id="lightbox35" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (7).JPG" alt="Scrabble (7)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 37 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (8).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox36"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (8)</p>
+      </div>
+      <div class="modal fade" id="lightbox36" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (8).jpg" alt="Scrabble (8)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 38 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/scrabble (9).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox37"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble (9)</p>
+      </div>
+      <div class="modal fade" id="lightbox37" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/scrabble (9).jpg" alt="Scrabble (9)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 39 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/Scrabble Poster.png');" data-bs-toggle="modal" data-bs-target="#lightbox38"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Scrabble Poster</p>
+      </div>
+      <div class="modal fade" id="lightbox38" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/Scrabble Poster.png" alt="Scrabble Poster" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 40 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/SIP 1.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox39"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · SIP 1</p>
+      </div>
+      <div class="modal fade" id="lightbox39" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/SIP 1.jpg" alt="SIP 1" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 41 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/SIP 2.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox40"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · SIP 2</p>
+      </div>
+      <div class="modal fade" id="lightbox40" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/SIP 2.jpg" alt="SIP 2" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 42 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/SIP 3.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox41"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · SIP 3</p>
+      </div>
+      <div class="modal fade" id="lightbox41" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/SIP 3.jpg" alt="SIP 3" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 43 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/SIP 4.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox42"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · SIP 4</p>
+      </div>
+      <div class="modal fade" id="lightbox42" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/SIP 4.jpg" alt="SIP 4" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 44 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/SIP 5.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox43"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · SIP 5</p>
+      </div>
+      <div class="modal fade" id="lightbox43" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/SIP 5.jpg" alt="SIP 5" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 45 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (1).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox44"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox44" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (1).jpeg" alt="Stellar25 (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 46 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (1).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox45"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox45" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (1).jpg" alt="Stellar25 (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 47 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (1).png');" data-bs-toggle="modal" data-bs-target="#lightbox46"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox46" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (1).png" alt="Stellar25 (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 48 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (10).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox47"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (10)</p>
+      </div>
+      <div class="modal fade" id="lightbox47" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (10).JPG" alt="Stellar25 (10)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 49 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (11).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox48"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (11)</p>
+      </div>
+      <div class="modal fade" id="lightbox48" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (11).JPG" alt="Stellar25 (11)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 50 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (12).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox49"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (12)</p>
+      </div>
+      <div class="modal fade" id="lightbox49" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (12).jpg" alt="Stellar25 (12)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 51 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (13).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox50"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (13)</p>
+      </div>
+      <div class="modal fade" id="lightbox50" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (13).jpg" alt="Stellar25 (13)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 52 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (14).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox51"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (14)</p>
+      </div>
+      <div class="modal fade" id="lightbox51" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (14).jpg" alt="Stellar25 (14)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 53 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (15).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox52"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (15)</p>
+      </div>
+      <div class="modal fade" id="lightbox52" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (15).jpg" alt="Stellar25 (15)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 54 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (16).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox53"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (16)</p>
+      </div>
+      <div class="modal fade" id="lightbox53" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (16).jpg" alt="Stellar25 (16)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 55 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (17).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox54"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (17)</p>
+      </div>
+      <div class="modal fade" id="lightbox54" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (17).jpg" alt="Stellar25 (17)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 56 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (18).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox55"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (18)</p>
+      </div>
+      <div class="modal fade" id="lightbox55" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (18).jpg" alt="Stellar25 (18)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 57 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (19).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox56"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (19)</p>
+      </div>
+      <div class="modal fade" id="lightbox56" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (19).jpg" alt="Stellar25 (19)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 58 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (2).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox57"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (2)</p>
+      </div>
+      <div class="modal fade" id="lightbox57" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (2).jpeg" alt="Stellar25 (2)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 59 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (2).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox58"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (2)</p>
+      </div>
+      <div class="modal fade" id="lightbox58" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (2).JPG" alt="Stellar25 (2)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 60 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (20).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox59"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (20)</p>
+      </div>
+      <div class="modal fade" id="lightbox59" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (20).jpg" alt="Stellar25 (20)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 61 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (21).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox60"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (21)</p>
+      </div>
+      <div class="modal fade" id="lightbox60" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (21).jpg" alt="Stellar25 (21)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 62 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (22).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox61"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (22)</p>
+      </div>
+      <div class="modal fade" id="lightbox61" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (22).jpg" alt="Stellar25 (22)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 63 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (23).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox62"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (23)</p>
+      </div>
+      <div class="modal fade" id="lightbox62" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (23).jpg" alt="Stellar25 (23)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 64 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (24).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox63"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (24)</p>
+      </div>
+      <div class="modal fade" id="lightbox63" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (24).jpg" alt="Stellar25 (24)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 65 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (25).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox64"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (25)</p>
+      </div>
+      <div class="modal fade" id="lightbox64" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (25).jpg" alt="Stellar25 (25)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 66 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (26).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox65"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (26)</p>
+      </div>
+      <div class="modal fade" id="lightbox65" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (26).jpg" alt="Stellar25 (26)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 67 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (27).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox66"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (27)</p>
+      </div>
+      <div class="modal fade" id="lightbox66" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (27).jpg" alt="Stellar25 (27)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 68 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (28).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox67"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (28)</p>
+      </div>
+      <div class="modal fade" id="lightbox67" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (28).jpg" alt="Stellar25 (28)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 69 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (29).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox68"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (29)</p>
+      </div>
+      <div class="modal fade" id="lightbox68" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (29).jpg" alt="Stellar25 (29)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 70 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (3).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox69"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (3)</p>
+      </div>
+      <div class="modal fade" id="lightbox69" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (3).jpeg" alt="Stellar25 (3)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 71 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (3).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox70"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (3)</p>
+      </div>
+      <div class="modal fade" id="lightbox70" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (3).JPG" alt="Stellar25 (3)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 72 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (30).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox71"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (30)</p>
+      </div>
+      <div class="modal fade" id="lightbox71" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (30).jpg" alt="Stellar25 (30)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 73 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (31).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox72"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (31)</p>
+      </div>
+      <div class="modal fade" id="lightbox72" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (31).jpg" alt="Stellar25 (31)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 74 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (32).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox73"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (32)</p>
+      </div>
+      <div class="modal fade" id="lightbox73" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (32).jpg" alt="Stellar25 (32)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 75 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (33).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox74"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (33)</p>
+      </div>
+      <div class="modal fade" id="lightbox74" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (33).jpg" alt="Stellar25 (33)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 76 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (34).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox75"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (34)</p>
+      </div>
+      <div class="modal fade" id="lightbox75" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (34).jpg" alt="Stellar25 (34)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 77 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (35).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox76"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (35)</p>
+      </div>
+      <div class="modal fade" id="lightbox76" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (35).jpg" alt="Stellar25 (35)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 78 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (36).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox77"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (36)</p>
+      </div>
+      <div class="modal fade" id="lightbox77" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (36).jpg" alt="Stellar25 (36)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 79 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (37).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox78"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (37)</p>
+      </div>
+      <div class="modal fade" id="lightbox78" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (37).jpg" alt="Stellar25 (37)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 80 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (38).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox79"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (38)</p>
+      </div>
+      <div class="modal fade" id="lightbox79" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (38).jpg" alt="Stellar25 (38)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 81 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (39).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox80"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (39)</p>
+      </div>
+      <div class="modal fade" id="lightbox80" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (39).jpg" alt="Stellar25 (39)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 82 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (4).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox81"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (4)</p>
+      </div>
+      <div class="modal fade" id="lightbox81" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (4).jpeg" alt="Stellar25 (4)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 83 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (4).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox82"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (4)</p>
+      </div>
+      <div class="modal fade" id="lightbox82" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (4).JPG" alt="Stellar25 (4)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 84 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (40).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox83"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (40)</p>
+      </div>
+      <div class="modal fade" id="lightbox83" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (40).jpg" alt="Stellar25 (40)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 85 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (41).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox84"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (41)</p>
+      </div>
+      <div class="modal fade" id="lightbox84" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (41).jpg" alt="Stellar25 (41)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 86 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (42).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox85"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (42)</p>
+      </div>
+      <div class="modal fade" id="lightbox85" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (42).jpg" alt="Stellar25 (42)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 87 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (43).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox86"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (43)</p>
+      </div>
+      <div class="modal fade" id="lightbox86" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (43).jpg" alt="Stellar25 (43)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 88 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (44).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox87"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (44)</p>
+      </div>
+      <div class="modal fade" id="lightbox87" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (44).jpg" alt="Stellar25 (44)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 89 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (45).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox88"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (45)</p>
+      </div>
+      <div class="modal fade" id="lightbox88" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (45).JPG" alt="Stellar25 (45)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 90 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (46).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox89"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (46)</p>
+      </div>
+      <div class="modal fade" id="lightbox89" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (46).JPG" alt="Stellar25 (46)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 91 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (47).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox90"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (47)</p>
+      </div>
+      <div class="modal fade" id="lightbox90" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (47).JPG" alt="Stellar25 (47)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 92 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (48).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox91"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (48)</p>
+      </div>
+      <div class="modal fade" id="lightbox91" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (48).JPG" alt="Stellar25 (48)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 93 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (49).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox92"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (49)</p>
+      </div>
+      <div class="modal fade" id="lightbox92" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (49).JPG" alt="Stellar25 (49)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 94 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (5).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox93"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (5)</p>
+      </div>
+      <div class="modal fade" id="lightbox93" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (5).jpeg" alt="Stellar25 (5)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 95 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (5).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox94"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (5)</p>
+      </div>
+      <div class="modal fade" id="lightbox94" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (5).JPG" alt="Stellar25 (5)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 96 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (50).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox95"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (50)</p>
+      </div>
+      <div class="modal fade" id="lightbox95" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (50).JPG" alt="Stellar25 (50)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 97 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (51).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox96"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (51)</p>
+      </div>
+      <div class="modal fade" id="lightbox96" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (51).JPG" alt="Stellar25 (51)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 98 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (52).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox97"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (52)</p>
+      </div>
+      <div class="modal fade" id="lightbox97" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (52).JPG" alt="Stellar25 (52)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 99 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (53).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox98"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (53)</p>
+      </div>
+      <div class="modal fade" id="lightbox98" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (53).JPG" alt="Stellar25 (53)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 100 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (54).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox99"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (54)</p>
+      </div>
+      <div class="modal fade" id="lightbox99" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (54).JPG" alt="Stellar25 (54)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 101 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (55).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox100"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (55)</p>
+      </div>
+      <div class="modal fade" id="lightbox100" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (55).JPG" alt="Stellar25 (55)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 102 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (56).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox101"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (56)</p>
+      </div>
+      <div class="modal fade" id="lightbox101" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (56).JPG" alt="Stellar25 (56)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 103 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (57).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox102"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (57)</p>
+      </div>
+      <div class="modal fade" id="lightbox102" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (57).JPG" alt="Stellar25 (57)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 104 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (58).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox103"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (58)</p>
+      </div>
+      <div class="modal fade" id="lightbox103" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (58).JPG" alt="Stellar25 (58)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 105 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (59).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox104"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (59)</p>
+      </div>
+      <div class="modal fade" id="lightbox104" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (59).jpg" alt="Stellar25 (59)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 106 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (6).jpeg');" data-bs-toggle="modal" data-bs-target="#lightbox105"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (6)</p>
+      </div>
+      <div class="modal fade" id="lightbox105" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (6).jpeg" alt="Stellar25 (6)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 107 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (6).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox106"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (6)</p>
+      </div>
+      <div class="modal fade" id="lightbox106" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (6).JPG" alt="Stellar25 (6)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 108 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (60).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox107"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (60)</p>
+      </div>
+      <div class="modal fade" id="lightbox107" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (60).jpg" alt="Stellar25 (60)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 109 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (61).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox108"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (61)</p>
+      </div>
+      <div class="modal fade" id="lightbox108" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (61).JPG" alt="Stellar25 (61)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 110 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (62).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox109"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (62)</p>
+      </div>
+      <div class="modal fade" id="lightbox109" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (62).JPG" alt="Stellar25 (62)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 111 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (63).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox110"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (63)</p>
+      </div>
+      <div class="modal fade" id="lightbox110" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (63).jpg" alt="Stellar25 (63)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 112 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (64).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox111"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (64)</p>
+      </div>
+      <div class="modal fade" id="lightbox111" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (64).JPG" alt="Stellar25 (64)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 113 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (65).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox112"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (65)</p>
+      </div>
+      <div class="modal fade" id="lightbox112" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (65).JPG" alt="Stellar25 (65)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 114 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (66).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox113"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (66)</p>
+      </div>
+      <div class="modal fade" id="lightbox113" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (66).JPG" alt="Stellar25 (66)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 115 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (67).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox114"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (67)</p>
+      </div>
+      <div class="modal fade" id="lightbox114" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (67).JPG" alt="Stellar25 (67)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 116 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (68).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox115"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (68)</p>
+      </div>
+      <div class="modal fade" id="lightbox115" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (68).jpg" alt="Stellar25 (68)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 117 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (7).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox116"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (7)</p>
+      </div>
+      <div class="modal fade" id="lightbox116" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (7).JPG" alt="Stellar25 (7)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 118 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (8).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox117"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (8)</p>
+      </div>
+      <div class="modal fade" id="lightbox117" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (8).JPG" alt="Stellar25 (8)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 119 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/stellar25 (9).JPG');" data-bs-toggle="modal" data-bs-target="#lightbox118"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Stellar25 (9)</p>
+      </div>
+      <div class="modal fade" id="lightbox118" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/stellar25 (9).JPG" alt="Stellar25 (9)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 120 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="others" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/student committee.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox119"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">others · Student Committee</p>
+      </div>
+      <div class="modal fade" id="lightbox119" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/student committee.jpg" alt="Student Committee" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 121 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="seminar" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/teachers day 22-23.png');" data-bs-toggle="modal" data-bs-target="#lightbox120"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">seminar · Teachers Day 22 23</p>
+      </div>
+      <div class="modal fade" id="lightbox120" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/teachers day 22-23.png" alt="Teachers Day 22 23" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 122 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/teachers quiz.png');" data-bs-toggle="modal" data-bs-target="#lightbox121"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Teachers Quiz</p>
+      </div>
+      <div class="modal fade" id="lightbox121" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/teachers quiz.png" alt="Teachers Quiz" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 123 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (1).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox122"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (1)</p>
+      </div>
+      <div class="modal fade" id="lightbox122" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (1).jpg" alt="Treasure Hunt (1)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 124 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (10).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox123"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (10)</p>
+      </div>
+      <div class="modal fade" id="lightbox123" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (10).jpg" alt="Treasure Hunt (10)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 125 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (11).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox124"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (11)</p>
+      </div>
+      <div class="modal fade" id="lightbox124" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (11).jpg" alt="Treasure Hunt (11)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 126 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (12).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox125"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (12)</p>
+      </div>
+      <div class="modal fade" id="lightbox125" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (12).jpg" alt="Treasure Hunt (12)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 127 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (13).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox126"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (13)</p>
+      </div>
+      <div class="modal fade" id="lightbox126" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (13).jpg" alt="Treasure Hunt (13)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 128 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (14).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox127"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (14)</p>
+      </div>
+      <div class="modal fade" id="lightbox127" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (14).jpg" alt="Treasure Hunt (14)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 129 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (15).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox128"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (15)</p>
+      </div>
+      <div class="modal fade" id="lightbox128" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (15).jpg" alt="Treasure Hunt (15)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 130 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (16).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox129"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (16)</p>
+      </div>
+      <div class="modal fade" id="lightbox129" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (16).jpg" alt="Treasure Hunt (16)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 131 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (17).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox130"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (17)</p>
+      </div>
+      <div class="modal fade" id="lightbox130" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (17).jpg" alt="Treasure Hunt (17)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 132 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (18).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox131"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (18)</p>
+      </div>
+      <div class="modal fade" id="lightbox131" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (18).jpg" alt="Treasure Hunt (18)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 133 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (19).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox132"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (19)</p>
+      </div>
+      <div class="modal fade" id="lightbox132" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (19).jpg" alt="Treasure Hunt (19)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 134 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (2).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox133"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (2)</p>
+      </div>
+      <div class="modal fade" id="lightbox133" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (2).jpg" alt="Treasure Hunt (2)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 135 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (20).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox134"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (20)</p>
+      </div>
+      <div class="modal fade" id="lightbox134" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (20).jpg" alt="Treasure Hunt (20)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 136 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (21).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox135"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (21)</p>
+      </div>
+      <div class="modal fade" id="lightbox135" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (21).jpg" alt="Treasure Hunt (21)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 137 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (22).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox136"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (22)</p>
+      </div>
+      <div class="modal fade" id="lightbox136" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (22).jpg" alt="Treasure Hunt (22)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 138 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (23).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox137"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (23)</p>
+      </div>
+      <div class="modal fade" id="lightbox137" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (23).jpg" alt="Treasure Hunt (23)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 139 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (24).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox138"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (24)</p>
+      </div>
+      <div class="modal fade" id="lightbox138" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (24).jpg" alt="Treasure Hunt (24)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 140 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (25).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox139"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (25)</p>
+      </div>
+      <div class="modal fade" id="lightbox139" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (25).jpg" alt="Treasure Hunt (25)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 141 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (26).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox140"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (26)</p>
+      </div>
+      <div class="modal fade" id="lightbox140" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (26).jpg" alt="Treasure Hunt (26)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 142 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (27).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox141"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (27)</p>
+      </div>
+      <div class="modal fade" id="lightbox141" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (27).jpg" alt="Treasure Hunt (27)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 143 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (28).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox142"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (28)</p>
+      </div>
+      <div class="modal fade" id="lightbox142" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (28).jpg" alt="Treasure Hunt (28)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 144 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (29).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox143"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (29)</p>
+      </div>
+      <div class="modal fade" id="lightbox143" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (29).jpg" alt="Treasure Hunt (29)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 145 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (3).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox144"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (3)</p>
+      </div>
+      <div class="modal fade" id="lightbox144" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (3).jpg" alt="Treasure Hunt (3)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 146 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (30).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox145"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (30)</p>
+      </div>
+      <div class="modal fade" id="lightbox145" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (30).jpg" alt="Treasure Hunt (30)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 147 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (31).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox146"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (31)</p>
+      </div>
+      <div class="modal fade" id="lightbox146" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (31).jpg" alt="Treasure Hunt (31)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 148 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (32).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox147"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (32)</p>
+      </div>
+      <div class="modal fade" id="lightbox147" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (32).jpg" alt="Treasure Hunt (32)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 149 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (33).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox148"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (33)</p>
+      </div>
+      <div class="modal fade" id="lightbox148" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (33).jpg" alt="Treasure Hunt (33)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 150 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (34).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox149"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (34)</p>
+      </div>
+      <div class="modal fade" id="lightbox149" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (34).jpg" alt="Treasure Hunt (34)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 151 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (35).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox150"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (35)</p>
+      </div>
+      <div class="modal fade" id="lightbox150" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (35).jpg" alt="Treasure Hunt (35)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 152 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (36).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox151"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (36)</p>
+      </div>
+      <div class="modal fade" id="lightbox151" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (36).jpg" alt="Treasure Hunt (36)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 153 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (37).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox152"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (37)</p>
+      </div>
+      <div class="modal fade" id="lightbox152" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (37).jpg" alt="Treasure Hunt (37)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 154 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (38).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox153"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (38)</p>
+      </div>
+      <div class="modal fade" id="lightbox153" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (38).jpg" alt="Treasure Hunt (38)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 155 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (4).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox154"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (4)</p>
+      </div>
+      <div class="modal fade" id="lightbox154" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (4).jpg" alt="Treasure Hunt (4)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 156 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (5).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox155"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (5)</p>
+      </div>
+      <div class="modal fade" id="lightbox155" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (5).jpg" alt="Treasure Hunt (5)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 157 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (6).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox156"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (6)</p>
+      </div>
+      <div class="modal fade" id="lightbox156" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (6).jpg" alt="Treasure Hunt (6)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 158 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (7).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox157"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (7)</p>
+      </div>
+      <div class="modal fade" id="lightbox157" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (7).jpg" alt="Treasure Hunt (7)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 159 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="160">
+        <div class="ph-image gallery-thumb" style="height:320px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (8).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox158"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (8)</p>
+      </div>
+      <div class="modal fade" id="lightbox158" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (8).jpg" alt="Treasure Hunt (8)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 160 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="240">
+        <div class="ph-image gallery-thumb" style="height:300px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt (9).jpg');" data-bs-toggle="modal" data-bs-target="#lightbox159"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt (9)</p>
+      </div>
+      <div class="modal fade" id="lightbox159" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt (9).jpg" alt="Treasure Hunt (9)" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 161 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="0">
+        <div class="ph-image gallery-thumb" style="height:240px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/treasure hunt.jpg');" data-bs-toggle="modal" data-bs-target="#lightbox160"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Treasure Hunt</p>
+      </div>
+      <div class="modal fade" id="lightbox160" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/treasure hunt.jpg" alt="Treasure Hunt" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 162 -->
+      <div class="gallery-item col-md-4 col-6 mb-4" data-cat="competition" data-aos="fade-up" data-aos-delay="80">
+        <div class="ph-image gallery-thumb" style="height:280px; aspect-ratio:auto; cursor:pointer; background-image:url('assets/img/gallery/Winners Scrabble.png');" data-bs-toggle="modal" data-bs-target="#lightbox161"></div>
+        <p class="mt-2 mb-0" style="font-size:.8rem; color:var(--muted); text-transform:capitalize;">competition · Winners Scrabble</p>
+      </div>
+      <div class="modal fade" id="lightbox161" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="background:transparent; border:none;">
+            <button type="button" class="btn-close btn-close-white position-absolute" style="top:-10px; right:0;" data-bs-dismiss="modal"></button>
+            <img src="assets/img/gallery/Winners Scrabble.png" alt="Winners Scrabble" style="width:100%; height:auto; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.4);">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item=>{
+      item.style.display = (f==='all' || item.dataset.cat===f) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+<footer class="footer-aelc">
+  <div class="container-aelc">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="aelc-brand mb-3"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span></div>
+        <p style="font-size:.9rem;">Advanced English Learners' Club — building communicators, speakers and leaders since our founding as the English Enhancement League.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="executive-committee.html">Committee</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+          <li><a href="communication-hub.html">Comm. Hub</a></li>
+          <li><a href="mock-interview.html">Mock Interview</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Contact</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot me-2"></i> Ramco Institute of Technology, Rajapalayam, Tamil Nadu</li>
+          <li><i class="fa-solid fa-envelope me-2"></i> aelc@ritrjpm.ac.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 00000 00000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Advanced English Learners' Club, Ramco Institute of Technology. All rights reserved.</span>
+      <span>Formerly English Enhancement League</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

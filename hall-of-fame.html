@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall of Fame | AELC — Ramco Institute of Technology</title>
+<meta name="description" content="Explore every academic year of AELC — achievements, events, reports, galleries and award winners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/logo.jpeg">
+</head>
+<body>
+
+<div class="loader-aelc">
+  <img src="assets/img/logo.jpeg" alt="AELC" class="loader-logo">
+  <div class="loader-bar"></div>
+</div>
+<div class="scroll-progress"></div>
+
+<nav class="aelc-nav">
+  <div class="container-aelc">
+    <a href="index.html" class="aelc-brand">
+      <img src="assets/img/logo.jpeg" alt="AELC Logo">
+      <span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span>
+    </a>
+    <ul class="aelc-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Committee</a></li><li><a href="hall-of-fame.html" class="active">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="communication-hub.html">Comm. Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="aelc-nav-actions">
+      <div class="icon-btn search-toggle" title="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="icon-btn theme-toggle" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></div>
+      <div class="icon-btn nav-toggle" title="Menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-overlay"></div>
+<div class="mobile-panel">
+  <span class="mobile-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  <div class="aelc-brand"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b></span></div>
+  <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Executive Committee</a></li><li><a href="hall-of-fame.html">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="communication-hub.html">Communication Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="resources.html">Resources</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="contact.html">Contact</a></li></ul>
+</div>
+<div class="search-modal" style="position:fixed;inset:0;background:rgba(10,20,40,.85);backdrop-filter:blur(6px);z-index:1300;display:none;align-items:flex-start;justify-content:center;">
+  <div style="width:100%;max-width:640px;margin-top:14vh;padding:0 20px;">
+    <div style="display:flex;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;gap:14px;">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--accent-text);"></i>
+      <input type="text" placeholder="Search events, resources, testimonials…" style="border:none;outline:none;flex:1;font-family:'Open Sans';font-size:1rem;">
+      <i class="fa-solid fa-xmark search-close" style="cursor:pointer;color:var(--accent-text);"></i>
+    </div>
+  </div>
+</div>
+<style>.search-modal.open{display:flex !important;}</style>
+
+<header class="page-hero">
+  <div class="container-aelc">
+    <div class="breadcrumb-aelc"><a href="index.html">Home</a> &nbsp;/&nbsp; Hall of Fame</div>
+    <span class="hero-badge">Every year, archived</span>
+    <h1 class="mt-3">Hall of Fame</h1>
+    <p class="mt-3">Click any academic year to explore its achievements, events, reports, gallery and award winners — everything preserved from the original site.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container-aelc">
+    <div class="row g-4">
+      
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <a href="#year-0" data-bs-toggle="modal" data-bs-target="#yearModal0" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2013–2014</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="#year-1" data-bs-toggle="modal" data-bs-target="#yearModal1" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2014–2015</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="#year-2" data-bs-toggle="modal" data-bs-target="#yearModal2" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2015–2016</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <a href="#year-3" data-bs-toggle="modal" data-bs-target="#yearModal3" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2016–2017</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <a href="#year-4" data-bs-toggle="modal" data-bs-target="#yearModal4" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2017–2018</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="#year-5" data-bs-toggle="modal" data-bs-target="#yearModal5" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2018–2019</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="#year-6" data-bs-toggle="modal" data-bs-target="#yearModal6" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2019–2020</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <a href="#year-7" data-bs-toggle="modal" data-bs-target="#yearModal7" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2020–2021</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <a href="#year-8" data-bs-toggle="modal" data-bs-target="#yearModal8" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2021–2022</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="#year-9" data-bs-toggle="modal" data-bs-target="#yearModal9" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2022–2023</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <a href="#year-10" data-bs-toggle="modal" data-bs-target="#yearModal10" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2023–2024</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <a href="#year-11" data-bs-toggle="modal" data-bs-target="#yearModal11" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2024–2025</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="0">
+        <a href="#year-12" data-bs-toggle="modal" data-bs-target="#yearModal12" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2025–2026</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <a href="#year-13" data-bs-toggle="modal" data-bs-target="#yearModal13" class="card-aelc d-block" style="cursor:pointer;">
+          <div class="card-icon gold"><i class="fa-solid fa-award"></i></div>
+          <h5 class="mb-1">2026–2027</h5>
+          <p style="font-size:.85rem; margin-bottom:0;">Achievements · Events · Reports · Gallery · Winners</p>
+          <span class="btn-aelc" style="padding:0; color:var(--accent-text); font-size:.8rem; margin-top:10px; display:inline-flex;">Open Archive <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="yearModal0" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2013–2014</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach0" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt0" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal0" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win0" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach0"><p>Achievements and award reports for 2013–2014 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt0"><p>All events conducted during 2013–2014, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal0"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win0"><p>Competition winners and award recipients for 2013–2014.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal1" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2014–2015</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach1" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt1" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal1" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win1" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach1"><p>Achievements and award reports for 2014–2015 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt1"><p>All events conducted during 2014–2015, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal1"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win1"><p>Competition winners and award recipients for 2014–2015.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal2" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2015–2016</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach2" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt2" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal2" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win2" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach2"><p>Achievements and award reports for 2015–2016 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt2"><p>All events conducted during 2015–2016, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal2"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win2"><p>Competition winners and award recipients for 2015–2016.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal3" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2016–2017</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach3" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt3" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal3" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win3" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach3"><p>Achievements and award reports for 2016–2017 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt3"><p>All events conducted during 2016–2017, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal3"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win3"><p>Competition winners and award recipients for 2016–2017.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal4" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2017–2018</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach4" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt4" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal4" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win4" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach4"><p>Achievements and award reports for 2017–2018 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt4"><p>All events conducted during 2017–2018, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal4"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win4"><p>Competition winners and award recipients for 2017–2018.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal5" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2018–2019</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach5" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt5" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal5" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win5" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach5"><p>Achievements and award reports for 2018–2019 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt5"><p>All events conducted during 2018–2019, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal5"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win5"><p>Competition winners and award recipients for 2018–2019.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal6" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2019–2020</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach6" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt6" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal6" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win6" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach6"><p>Achievements and award reports for 2019–2020 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt6"><p>All events conducted during 2019–2020, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal6"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win6"><p>Competition winners and award recipients for 2019–2020.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal7" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2020–2021</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach7" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt7" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal7" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win7" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach7"><p>Achievements and award reports for 2020–2021 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt7"><p>All events conducted during 2020–2021, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal7"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win7"><p>Competition winners and award recipients for 2020–2021.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal8" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2021–2022</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach8" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt8" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal8" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win8" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach8"><p>Achievements and award reports for 2021–2022 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt8"><p>All events conducted during 2021–2022, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal8"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win8"><p>Competition winners and award recipients for 2021–2022.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal9" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2022–2023</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach9" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt9" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal9" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win9" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach9"><p>Achievements and award reports for 2022–2023 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt9"><p>All events conducted during 2022–2023, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal9"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win9"><p>Competition winners and award recipients for 2022–2023.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal10" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2023–2024</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach10" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt10" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal10" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win10" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach10"><p>Achievements and award reports for 2023–2024 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt10"><p>All events conducted during 2023–2024, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal10"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win10"><p>Competition winners and award recipients for 2023–2024.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal11" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2024–2025</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach11" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt11" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal11" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win11" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach11"><p>Achievements and award reports for 2024–2025 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt11"><p>All events conducted during 2024–2025, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal11"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win11"><p>Competition winners and award recipients for 2024–2025.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal12" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2025–2026</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach12" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt12" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal12" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win12" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach12"><p>Achievements and award reports for 2025–2026 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt12"><p>All events conducted during 2025–2026, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal12"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win12"><p>Competition winners and award recipients for 2025–2026.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="modal fade" id="yearModal13" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px; border:none;">
+      <div class="modal-header" style="background:linear-gradient(120deg,var(--navy),var(--maroon-deep)); border-radius:20px 20px 0 0; border:none;">
+        <h5 class="modal-title" style="color:#fff;">Academic Year 2026–2027</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <ul class="nav nav-pills mb-3 gap-2" role="tablist">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ach13" type="button">Achievements</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#evt13" type="button">Events</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#gal13" type="button">Gallery</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#win13" type="button">Winners</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ach13"><p>Achievements and award reports for 2026–2027 will be listed here, migrated from the original Google Sites pages.</p></div>
+          <div class="tab-pane fade" id="evt13"><p>All events conducted during 2026–2027, with descriptions and downloadable reports.</p></div>
+          <div class="tab-pane fade" id="gal13"><div class="row g-2"><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div><div class="col-4"><div class="ph-image" style="aspect-ratio:1/1;"><i class="fa-regular fa-image"></i></div></div></div></div>
+          <div class="tab-pane fade" id="win13"><p>Competition winners and award recipients for 2026–2027.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+<footer class="footer-aelc">
+  <div class="container-aelc">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="aelc-brand mb-3"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span></div>
+        <p style="font-size:.9rem;">Advanced English Learners' Club — building communicators, speakers and leaders since our founding as the English Enhancement League.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="executive-committee.html">Committee</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+          <li><a href="communication-hub.html">Comm. Hub</a></li>
+          <li><a href="mock-interview.html">Mock Interview</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Contact</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot me-2"></i> Ramco Institute of Technology, Rajapalayam, Tamil Nadu</li>
+          <li><i class="fa-solid fa-envelope me-2"></i> aelc@ritrjpm.ac.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 00000 00000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Advanced English Learners' Club, Ramco Institute of Technology. All rights reserved.</span>
+      <span>Formerly English Enhancement League</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

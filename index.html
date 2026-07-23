@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AELC — Advanced English Learners' Club | Ramco Institute of Technology</title>
+<meta name="description" content="The official home of the Advanced English Learners' Club (AELC), Ramco Institute of Technology — communication, leadership and fluency, reimagined.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/logo.jpeg">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader-aelc">
+  <img src="assets/img/logo.jpeg" alt="AELC" class="loader-logo">
+  <div class="loader-bar"></div>
+</div>
+
+<div class="scroll-progress"></div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="aelc-nav">
+  <div class="container-aelc">
+    <a href="index.html" class="aelc-brand">
+      <img src="assets/img/logo.jpeg" alt="AELC Logo">
+      <span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span>
+    </a>
+    <ul class="aelc-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="executive-committee.html">Committee</a></li>
+      <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="communication-hub.html">Comm. Hub</a></li>
+      <li><a href="mock-interview.html">Mock Interview</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="aelc-nav-actions">
+      <div class="icon-btn search-toggle" title="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="icon-btn theme-toggle" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></div>
+      <div class="icon-btn nav-toggle" title="Menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-overlay"></div>
+<div class="mobile-panel">
+  <span class="mobile-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  <div class="aelc-brand"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b></span></div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="executive-committee.html">Executive Committee</a></li>
+    <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="communication-hub.html">Communication Hub</a></li>
+    <li><a href="mock-interview.html">Mock Interview</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Search Modal -->
+<div class="search-modal" style="position:fixed;inset:0;background:rgba(10,20,40,.85);backdrop-filter:blur(6px);z-index:1300;display:none;align-items:flex-start;justify-content:center;">
+  <div style="width:100%;max-width:640px;margin-top:14vh;padding:0 20px;">
+    <div style="display:flex;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;gap:14px;">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--accent-text);"></i>
+      <input type="text" placeholder="Search events, resources, testimonials…" style="border:none;outline:none;flex:1;font-family:'Open Sans';font-size:1rem;">
+      <i class="fa-solid fa-xmark search-close" style="cursor:pointer;color:var(--accent-text);"></i>
+    </div>
+  </div>
+</div>
+<style>.search-modal.open{display:flex !important;}</style>
+
+<!-- ================= SPOTLIGHT '26 EVENT POPUP ================= -->
+<style>
+.event-popup-overlay{position:fixed;inset:0;background:rgba(10,10,15,.78);backdrop-filter:blur(6px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;}
+.event-popup-overlay.open{display:flex;}
+.event-popup-card{position:relative;max-width:460px;width:100%;background:var(--charcoal,#1a1a1a);border:1px solid rgba(201,182,156,.4);border-radius:20px;padding:36px 32px;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.55);max-height:90vh;overflow-y:auto;}
+.event-popup-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.event-popup-close:hover{background:rgba(255,255,255,.18);}
+.event-popup-header{text-align:center;margin-bottom:20px;}
+.event-popup-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;letter-spacing:.02em;margin:14px 0 6px;color:var(--beige-dark,#c9b69c);}
+.event-popup-date{font-size:.9rem;color:rgba(255,255,255,.8);margin-bottom:4px;}
+.event-popup-date i{margin-right:6px;}
+.event-popup-tagline{font-style:italic;font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:0;}
+.event-popup-body{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+.event-popup-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 16px;}
+.event-popup-item h6{font-family:'Poppins';font-weight:600;margin-bottom:4px;font-size:.95rem;color:#fff;}
+.event-popup-item h6 i{margin-right:8px;color:var(--beige-dark,#c9b69c);}
+.event-popup-item p{font-size:.8rem;color:rgba(255,255,255,.65);margin:0;}
+.event-popup-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.event-popup-actions .btn-aelc{flex:1;min-width:150px;text-align:center;justify-content:center;}
+@media(max-width:480px){.event-popup-card{padding:30px 22px;}.event-popup-title{font-size:1.6rem;}}
+</style>
+<div class="event-popup-overlay" id="eventPopupOverlay">
+  <div class="event-popup-card">
+    <button class="event-popup-close" id="eventPopupClose" aria-label="Close popup"><i class="fa-solid fa-xmark"></i></button>
+    <div class="event-popup-header">
+      <span class="hero-badge"><i class="fa-solid fa-masks-theater"></i> Upcoming Event</span>
+      <h2 class="event-popup-title">SPOTLIGHT '26</h2>
+      <p class="event-popup-date"><i class="fa-solid fa-calendar-days"></i>25th July 2026</p>
+      <p class="event-popup-tagline">Ignite the Stage. Inspire the World.</p>
+    </div>
+    <div class="event-popup-body">
+      <div class="event-popup-item">
+        <h6><i class="fa-solid fa-masks-theater"></i>Echoes Beyond Ages</h6>
+        <p>Theme: Characters Who Inspire &middot; Team of 3–5 &middot; 5–7 mins</p>
+      </div>
+      <div class="event-popup-item">
+        <h6><i class="fa-solid fa-recycle"></i>Voiceless Voices (Mime)</h6>
+        <p>Theme: Waste Not, Want Not &middot; Team of 4–8 &middot; 4–6 mins</p>
+      </div>
+    </div>
+    <div class="event-popup-actions">
+      <a href="https://forms.gle/457uobU5QXZG19P27" target="_blank" rel="noopener" class="btn-aelc btn-gold-aelc">Register Now <i class="fa-solid fa-arrow-right"></i></a>
+      <button class="btn-aelc btn-outline-aelc" id="eventPopupDismiss" type="button">Maybe Later</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero-aelc">
+  <div class="hero-particles"></div>
+  <div class="container-aelc">
+    <div class="row align-items-center hero-content">
+      <div class="col-lg-7">
+        <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> Ramco Institute of Technology</span>
+        <h1 class="hero-title"><span class="accent">Advanced English<br>Learners' Club</span></h1>
+        <div class="hero-tagline">
+          <span>We help students</span>
+          <span class="cycle-word" data-words='["Learn","Communicate","Lead"]'>Learn</span>
+        </div>
+        <p class="hero-desc">A community built for students who want to speak with clarity, write with confidence, and lead with presence — through workshops, mock interviews, and real conversation practice.</p>
+        <div class="hero-actions">
+          <a href="about.html" class="btn-aelc btn-gold-aelc">Explore AELC <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="mock-interview.html" class="btn-aelc btn-outline-aelc"><i class="fa-solid fa-microphone"></i> Mock Interview</a>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-glass-card">
+          <div class="d-flex justify-content-between mb-4">
+            <div>
+              <div class="stat-num" style="font-size:1.9rem;">12+</div>
+              <div class="stat-label" style="color:var(--muted);">Years Strong</div>
+            </div>
+            <div class="card-icon gold" style="margin:0;"><i class="fa-solid fa-comments"></i></div>
+          </div>
+          <p style="color:var(--muted); font-size:.95rem; margin-bottom:22px;">From workshops to AI-assisted mock interviews — one club, every skill you need to speak up and stand out.</p>
+          <div class="d-flex gap-3">
+            <div style="flex:1;text-align:center;padding:14px 8px;border-radius:12px;background:rgba(30,30,30,.04);">
+              <div style="color:var(--charcoal);font-family:'Poppins';font-weight:700;font-size:1.3rem;">50+</div>
+              <div style="color:var(--muted);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;">Events</div>
+            </div>
+            <div style="flex:1;text-align:center;padding:14px 8px;border-radius:12px;background:rgba(30,30,30,.04);">
+              <div style="color:var(--charcoal);font-family:'Poppins';font-weight:700;font-size:1.3rem;">1200+</div>
+              <div style="color:var(--muted);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;">Participants</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-cue">Scroll<div class="line"></div></div>
+</header>
+
+<!-- ================= ABOUT PREVIEW ================= -->
+<section class="section">
+  <div class="container-aelc">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <span class="eyebrow">Who we are</span>
+        <h2 class="section-title title-stroke">A club built on one belief — <span class="text-gold" style="color:var(--accent-text);">English opens doors</span></h2>
+        <p class="section-sub">Since our founding, AELC has grown from a small English enhancement circle into Ramco Institute of Technology's leading platform for communication, confidence and career readiness. We kept the mission and gave it a new name that reflects where we're headed.</p>
+        <a href="about.html" class="btn-aelc btn-navy-outline mt-2">Read Our Story <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-aelc">
+              <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <h5>Our Mission</h5>
+              <p style="font-size:.92rem;">Equip every student with the fluency and confidence to communicate in any room, on any stage.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-aelc">
+              <div class="card-icon gold"><i class="fa-solid fa-eye"></i></div>
+              <h5>Our Vision</h5>
+              <p style="font-size:.92rem;">To be the definitive launchpad for communication excellence across the institute.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-aelc">
+              <div class="card-icon navy"><i class="fa-solid fa-timeline"></i></div>
+              <h5>Our History</h5>
+              <p style="font-size:.92rem;">12+ years of workshops, seminars and competitions — formerly the English Enhancement League.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-aelc">
+              <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+              <h5>Objectives</h5>
+              <p style="font-size:.92rem;">Fluency, leadership, public speaking and career-readiness — built one session at a time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY AELC ================= -->
+<section class="section" style="background:var(--cream-2);">
+  <div class="container-aelc">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Why join</span>
+      <h2 class="section-title title-stroke">Why students choose AELC</h2>
+      <p class="section-sub mx-auto">Six reasons students walk in shy and walk out ready to lead.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-aelc text-center">
+          <div class="card-icon mx-auto"><i class="fa-solid fa-comments"></i></div>
+          <h5>Communication Skills</h5><p style="font-size:.92rem;">Structured practice in speaking, listening and writing that sticks.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-aelc text-center">
+          <div class="card-icon gold mx-auto"><i class="fa-solid fa-people-group"></i></div>
+          <h5>Leadership</h5><p style="font-size:.92rem;">Lead teams, host events, and grow beyond the classroom.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-aelc text-center">
+          <div class="card-icon navy mx-auto"><i class="fa-solid fa-bullhorn"></i></div>
+          <h5>Public Speaking</h5><p style="font-size:.92rem;">From stage fright to stage presence, one talk at a time.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-aelc text-center">
+          <div class="card-icon mx-auto"><i class="fa-solid fa-briefcase"></i></div>
+          <h5>Career Readiness</h5><p style="font-size:.92rem;">Interview-ready English for placements and beyond.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-aelc text-center">
+          <div class="card-icon gold mx-auto"><i class="fa-solid fa-star"></i></div>
+          <h5>Confidence</h5><p style="font-size:.92rem;">A safe space to practise, fail, retry and grow.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-aelc text-center">
+          <div class="card-icon navy mx-auto"><i class="fa-solid fa-language"></i></div>
+          <h5>English Fluency</h5><p style="font-size:.92rem;">Everyday fluency built through weekly practice, not theory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats-band section-tight">
+  <div class="container-aelc">
+    <div class="row g-4">
+      <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-delay="0">
+        <div class="stat-num" data-count="50" data-suffix="+">0</div>
+        <div class="stat-label">Events</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-num" data-count="1200" data-suffix="+">0</div>
+        <div class="stat-label">Participants</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-num" data-count="15" data-suffix="+">0</div>
+        <div class="stat-label">Guest Speakers</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item" data-aos="zoom-in" data-aos-delay="300">
+        <div class="stat-num" data-count="12" data-suffix="+">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LATEST EVENTS ================= -->
+<section class="section">
+  <div class="container-aelc">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5" data-aos="fade-up">
+      <div>
+        <span class="eyebrow">What's been happening</span>
+        <h2 class="section-title title-stroke" style="margin-bottom:0;">Latest Events</h2>
+      </div>
+      <a href="events.html" class="btn-aelc btn-navy-outline">View All Events <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="card-aelc" style="padding:0; overflow:hidden;">
+          <div class="ph-image" style="border-radius:0; aspect-ratio:16/10;"><i class="fa-regular fa-image"></i></div>
+          <div style="padding:26px;">
+            <span class="badge-soft">Workshop</span>
+            <h5 class="mt-3">Public Speaking Bootcamp</h5>
+            <p style="font-size:.9rem;">A two-day intensive on stage presence, articulation and audience command.</p>
+            <a href="events.html" class="btn-aelc" style="padding:0;color:var(--accent-text);font-size:.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-aelc" style="padding:0; overflow:hidden;">
+          <div class="ph-image" style="border-radius:0; aspect-ratio:16/10;"><i class="fa-regular fa-image"></i></div>
+          <div style="padding:26px;">
+            <span class="badge-soft">Competition</span>
+            <h5 class="mt-3">Inter-Department Debate</h5>
+            <p style="font-size:.9rem;">Sharp arguments, sharper rebuttals — departments battled it out on stage.</p>
+            <a href="events.html" class="btn-aelc" style="padding:0;color:var(--accent-text);font-size:.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-aelc" style="padding:0; overflow:hidden;">
+          <div class="ph-image" style="border-radius:0; aspect-ratio:16/10;"><i class="fa-regular fa-image"></i></div>
+          <div style="padding:26px;">
+            <span class="badge-soft">Seminar</span>
+            <h5 class="mt-3">Grammar & Beyond</h5>
+            <p style="font-size:.9rem;">A guest-led deep dive into the grammar mistakes that hold fluent speakers back.</p>
+            <a href="events.html" class="btn-aelc" style="padding:0;color:var(--accent-text);font-size:.85rem;">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UPCOMING EVENT ================= -->
+<section class="section-tight">
+  <div class="container-aelc">
+    <div class="glass-card" style="background:var(--charcoal); padding:50px; border:none;" data-aos="fade-up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-2 text-center">
+          <div style="background:rgba(255,255,255,.06); border:1px solid rgba(201,182,156,.4); border-radius:16px; padding:18px;">
+            <div style="color:var(--beige-dark); font-family:'Poppins'; font-weight:700; font-size:2rem;">25</div>
+            <div style="color:rgba(255,255,255,.6); font-size:.75rem; text-transform:uppercase; letter-spacing:.1em;">July 2026</div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <span class="hero-badge">Upcoming</span>
+          <h3 style="color:#fff; margin:14px 0 8px;">Spotlight '26 — Ignite the Stage. Inspire the World.</h3>
+          <p style="color:rgba(255,255,255,.65); margin-bottom:0;">Two stage events: "Echoes Beyond Ages" (Characters Who Inspire) and "Voiceless Voices" — a mime on Waste Not, Want Not. Scan the QR on the poster or register below.</p>
+        </div>
+        <div class="col-lg-3 text-lg-end">
+          <a href="https://forms.gle/457uobU5QXZG19P27" target="_blank" rel="noopener" class="btn-aelc btn-gold-aelc">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HALL OF FAME PREVIEW ================= -->
+<section class="section" style="background:var(--cream-2);">
+  <div class="container-aelc">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">A legacy, year by year</span>
+      <h2 class="section-title title-stroke">Hall of Fame</h2>
+      <p class="section-sub mx-auto">Every academic year, archived — achievements, reports, galleries and winners, all in one place.</p>
+    </div>
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="0">
+        <a href="hall-of-fame.html" class="card-aelc d-block text-center" style="padding:22px 10px;">
+          <i class="fa-solid fa-trophy" style="color:var(--beige-dark); font-size:1.4rem;"></i>
+          <div style="font-family:'Poppins'; font-weight:600; margin-top:10px; font-size:.9rem;">2025–26</div>
+        </a>
+      </div>
+      <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="100">
+        <a href="hall-of-fame.html" class="card-aelc d-block text-center" style="padding:22px 10px;">
+          <i class="fa-solid fa-trophy" style="color:var(--beige-dark); font-size:1.4rem;"></i>
+          <div style="font-family:'Poppins'; font-weight:600; margin-top:10px; font-size:.9rem;">2024–25</div>
+        </a>
+      </div>
+      <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="200">
+        <a href="hall-of-fame.html" class="card-aelc d-block text-center" style="padding:22px 10px;">
+          <i class="fa-solid fa-trophy" style="color:var(--beige-dark); font-size:1.4rem;"></i>
+          <div style="font-family:'Poppins'; font-weight:600; margin-top:10px; font-size:.9rem;">2023–24</div>
+        </a>
+      </div>
+      <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="300">
+        <a href="hall-of-fame.html" class="card-aelc d-block text-center" style="padding:22px 10px;">
+          <i class="fa-solid fa-trophy" style="color:var(--beige-dark); font-size:1.4rem;"></i>
+          <div style="font-family:'Poppins'; font-weight:600; margin-top:10px; font-size:.9rem;">2022–23</div>
+        </a>
+      </div>
+      <div class="col-6 col-md-2" data-aos="zoom-in" data-aos-delay="400">
+        <a href="hall-of-fame.html" class="card-aelc d-block text-center" style="padding:22px 10px; background:var(--charcoal);">
+          <i class="fa-solid fa-layer-group" style="color:var(--beige-light); font-size:1.4rem;"></i>
+          <div style="font-family:'Poppins'; font-weight:600; margin-top:10px; font-size:.9rem; color:#fff;">All Years</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMMUNICATION HUB PREVIEW ================= -->
+<section class="section">
+  <div class="container-aelc">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="eyebrow">Daily practice</span>
+        <h2 class="section-title title-stroke">Communication Hub</h2>
+        <p class="section-sub">Word of the week, idioms, grammar tips and interview prep — a little English, every day.</p>
+        <a href="communication-hub.html" class="btn-aelc btn-navy-outline">Visit the Hub <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="card-aelc" style="padding:20px;">
+              <span class="badge-soft">Word of the Week</span>
+              <h5 class="mt-2 mb-0" style="font-size:1.1rem;">Ephemeral</h5>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-aelc" style="padding:20px;">
+              <span class="badge-soft">Idiom of the Week</span>
+              <h5 class="mt-2 mb-0" style="font-size:1.1rem;">Break the ice</h5>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-aelc" style="padding:20px;">
+              <span class="badge-soft">Grammar Tip</span>
+              <p class="mb-0" style="font-size:.85rem;">"Fewer" for count nouns, "less" for amounts.</p>
+            </div>
+          </div>
+          <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-aelc" style="padding:20px;">
+              <span class="badge-soft">Speaking Tip</span>
+              <p class="mb-0" style="font-size:.85rem;">Pause instead of saying "um" — silence sounds confident.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOCK INTERVIEW PROMO ================= -->
+<section class="section-tight">
+  <div class="container-aelc">
+    <div class="glass-card" style="background:var(--charcoal); border:none; padding:60px; text-align:center;" data-aos="zoom-in">
+      <i class="fa-solid fa-microphone-lines" style="font-size:2.4rem; color:var(--beige-dark);"></i>
+      <h2 style="color:#fff; margin:18px 0 10px;">Practice Your English Communication with AI</h2>
+      <p style="color:rgba(255,255,255,.7); max-width:560px; margin:0 auto 26px;">A future-ready mock interview experience focused on fluency, confidence and professional English — not technical questions.</p>
+      <a href="mock-interview.html" class="btn-aelc btn-gold-aelc">Start Interview <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section" style="background:var(--cream-2);">
+  <div class="container-aelc">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">In their words</span>
+      <h2 class="section-title title-stroke">What Our Members Say</h2>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <div class="ph-avatar mx-auto mb-3" style="width:80px;height:80px;"><i class="fa-solid fa-user"></i></div>
+              <p style="font-size:1.1rem; font-style:italic; color:var(--ink);">"AELC gave me the confidence to speak in front of 500 people. The mock interviews alone were worth every session."</p>
+              <h6 style="font-family:'Poppins'; margin-bottom:0;">Student Name</h6>
+              <span class="badge-soft">Batch 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <div class="ph-avatar mx-auto mb-3" style="width:80px;height:80px;"><i class="fa-solid fa-user"></i></div>
+              <p style="font-size:1.1rem; font-style:italic; color:var(--ink);">"I joined shy and left as a club coordinator. AELC quite literally changed how I carry myself."</p>
+              <h6 style="font-family:'Poppins'; margin-bottom:0;">Student Name</h6>
+              <span class="badge-soft">Batch 2022</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+              <div class="ph-avatar mx-auto mb-3" style="width:80px;height:80px;"><i class="fa-solid fa-user"></i></div>
+              <p style="font-size:1.1rem; font-style:italic; color:var(--ink);">"The weekly vocabulary drills and grammar sessions made a real difference in my placement interviews."</p>
+              <h6 style="font-family:'Poppins'; margin-bottom:0;">Student Name</h6>
+              <span class="badge-soft">Batch 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="icon-btn" style="background:var(--charcoal);" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="icon-btn" style="background:var(--charcoal);" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <p class="text-center mt-4" style="font-size:.85rem;"><em>All testimonials preserved from our original site.</em> <a href="about.html#testimonials" style="color:var(--accent-text); font-weight:600;">View all testimonials →</a></p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer-aelc">
+  <div class="container-aelc">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="aelc-brand mb-3"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span></div>
+        <p style="font-size:.9rem;">Advanced English Learners' Club — building communicators, speakers and leaders since our founding as the English Enhancement League.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="executive-committee.html">Committee</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+          <li><a href="communication-hub.html">Comm. Hub</a></li>
+          <li><a href="mock-interview.html">Mock Interview</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Contact</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot me-2"></i> Ramco Institute of Technology, Rajapalayam, Tamil Nadu</li>
+          <li><i class="fa-solid fa-envelope me-2"></i> aelc@ritrjpm.ac.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 00000 00000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Advanced English Learners' Club, Ramco Institute of Technology. All rights reserved.</span>
+      <span>Formerly English Enhancement League</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  var overlay = document.getElementById('eventPopupOverlay');
+  if(!overlay) return;
+  var closeBtn = document.getElementById('eventPopupClose');
+  var dismissBtn = document.getElementById('eventPopupDismiss');
+  var seenKey = 'aelc_spotlight26_popup_seen';
+
+  function openPopup(){
+    overlay.classList.add('open');
+  }
+  function closePopup(){
+    overlay.classList.remove('open');
+    sessionStorage.setItem(seenKey, '1');
+  }
+
+  if(!sessionStorage.getItem(seenKey)){
+    setTimeout(openPopup, 900);
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  dismissBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) closePopup();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('open')) closePopup();
+  });
+})();
+</script>
+</body>
+</html>

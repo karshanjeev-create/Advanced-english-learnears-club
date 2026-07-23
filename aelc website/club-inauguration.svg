@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgCI" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1428"/>
+      <stop offset="100%" stop-color="#132548"/>
+    </linearGradient>
+    <radialGradient id="glowCI" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#F4C542" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F4C542" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bgCI)"/>
+  <rect width="400" height="250" fill="url(#glowCI)"/>
+  <!-- radiating rays -->
+  <g stroke="#C9A227" stroke-width="1" opacity="0.35">
+    <line x1="200" y1="70" x2="140" y2="20"/>
+    <line x1="200" y1="70" x2="200" y2="10"/>
+    <line x1="200" y1="70" x2="260" y2="20"/>
+    <line x1="200" y1="70" x2="110" y2="55"/>
+    <line x1="200" y1="70" x2="290" y2="55"/>
+  </g>
+  <!-- traditional lamp (kuthuvilakku) -->
+  <g transform="translate(200,175)">
+    <ellipse cx="0" cy="70" rx="70" ry="8" fill="#000" opacity="0.25"/>
+    <path d="M-4,70 L-4,40 Q-4,34 0,34 Q4,34 4,40 L4,70 Z" fill="#C9A227"/>
+    <path d="M-18,40 Q0,58 18,40 Q18,30 0,26 Q-18,30 -18,40 Z" fill="#E7B84B"/>
+    <ellipse cx="0" cy="26" rx="17" ry="6" fill="#F4EFE6"/>
+    <path d="M-15,26 Q0,10 15,26 Q0,20 -15,26 Z" fill="#D8AA2D"/>
+    <path d="M0,26 Q-2,10 0,-4 Q2,10 0,26 Z" fill="#F4C542"/>
+    <path d="M0,4 Q-4,-8 0,-22 Q4,-8 0,4 Z" fill="#FBE28A"/>
+  </g>
+  <!-- flanking small lamps -->
+  <g transform="translate(120,205)" opacity="0.85">
+    <path d="M-3,20 L-3,0 Q-3,-4 0,-4 Q3,-4 3,0 L3,20 Z" fill="#C9A227"/>
+    <ellipse cx="0" cy="0" rx="10" ry="4" fill="#F4EFE6"/>
+    <path d="M0,-4 Q-2,-14 0,-24 Q2,-14 0,-4 Z" fill="#F4C542"/>
+  </g>
+  <g transform="translate(280,205)" opacity="0.85">
+    <path d="M-3,20 L-3,0 Q-3,-4 0,-4 Q3,-4 3,0 L3,20 Z" fill="#C9A227"/>
+    <ellipse cx="0" cy="0" rx="10" ry="4" fill="#F4EFE6"/>
+    <path d="M0,-4 Q-2,-14 0,-24 Q2,-14 0,-4 Z" fill="#F4C542"/>
+  </g>
+  <text x="200" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#F4EFE6" letter-spacing="2">CLUB INAUGURATION</text>
+</svg>

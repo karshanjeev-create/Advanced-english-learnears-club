@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communication Hub | AELC — Ramco Institute of Technology</title>
+<meta name="description" content="Word of the week, idioms, grammar tips, vocabulary, speaking and interview skills from AELC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/logo.jpeg">
+<style>
+/* Hub Controls & Filters */
+.search-box-aelc {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box-aelc .search-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.search-box-aelc #hub-search {
+  padding-left: 44px;
+}
+.filters-container {
+  position: relative;
+  width: 100%;
+}
+.filters-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 4px 10px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-2) transparent;
+}
+.filters-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.filters-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filters-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent-2);
+  border-radius: 10px;
+}
+.filter-chip {
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--card-border);
+  background: var(--white);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-chip:hover {
+  background: rgba(30, 30, 30, 0.05);
+  border-color: var(--accent-strong);
+  color: var(--navy);
+}
+[data-theme="dark"] .filter-chip:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+}
+.filter-chip.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  box-shadow: 0 6px 14px -6px rgba(30,30,30,0.5);
+}
+[data-theme="dark"] .filter-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--navy);
+  box-shadow: 0 6px 14px -6px rgba(0,0,0,0.5);
+}
+
+/* Pagination Load More */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  width: 100%;
+}
+.empty-state i {
+  font-size: 3rem;
+  color: var(--accent-strong);
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+
+<div class="loader-aelc">
+  <img src="assets/img/logo.jpeg" alt="AELC" class="loader-logo">
+  <div class="loader-bar"></div>
+</div>
+<div class="scroll-progress"></div>
+
+<nav class="aelc-nav">
+  <div class="container-aelc">
+    <a href="index.html" class="aelc-brand">
+      <img src="assets/img/logo.jpeg" alt="AELC Logo">
+      <span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span>
+    </a>
+    <ul class="aelc-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Committee</a></li><li><a href="hall-of-fame.html">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="communication-hub.html" class="active">Comm. Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="aelc-nav-actions">
+      <div class="icon-btn search-toggle" title="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="icon-btn theme-toggle" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></div>
+      <div class="icon-btn nav-toggle" title="Menu"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-overlay"></div>
+<div class="mobile-panel">
+  <span class="mobile-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  <div class="aelc-brand"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b></span></div>
+  <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="executive-committee.html">Executive Committee</a></li><li><a href="hall-of-fame.html">Hall of Fame</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="communication-hub.html">Communication Hub</a></li><li><a href="mock-interview.html">Mock Interview</a></li><li><a href="resources.html">Resources</a></li><li><a href="calendar.html">Calendar</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="contact.html">Contact</a></li></ul>
+</div>
+<div class="search-modal" style="position:fixed;inset:0;background:rgba(10,20,40,.85);backdrop-filter:blur(6px);z-index:1300;display:none;align-items:flex-start;justify-content:center;">
+  <div style="width:100%;max-width:640px;margin-top:14vh;padding:0 20px;">
+    <div style="display:flex;align-items:center;background:#fff;border-radius:16px;padding:16px 20px;gap:14px;">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--accent-text);"></i>
+      <input type="text" placeholder="Search events, resources, testimonials…" style="border:none;outline:none;flex:1;font-family:'Open Sans';font-size:1rem;">
+      <i class="fa-solid fa-xmark search-close" style="cursor:pointer;color:var(--accent-text);"></i>
+    </div>
+  </div>
+</div>
+<style>.search-modal.open{display:flex !important;}</style>
+
+<header class="page-hero">
+  <div class="container-aelc">
+    <div class="breadcrumb-aelc"><a href="index.html">Home</a> &nbsp;/&nbsp; Communication Hub</div>
+    <span class="hero-badge">Daily practice</span>
+    <h1 class="mt-3">Communication Hub</h1>
+    <p class="mt-3">Word of the week, idioms, grammar, vocabulary, speaking and interview skills — a little English every day.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container-aelc">
+    
+    <!-- Dynamic Controls (Search & Filters) -->
+    <div class="hub-controls mb-5" data-aos="fade-up">
+      <div class="row g-3 align-items-center">
+        <!-- Search bar -->
+        <div class="col-lg-4 col-md-5">
+          <div class="search-box-aelc">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="hub-search" class="form-control-aelc" placeholder="Search words, idioms, tips...">
+          </div>
+        </div>
+        <!-- Category Filter list -->
+        <div class="col-lg-8 col-md-7">
+          <div class="filters-container">
+            <div class="filters-scroll">
+              <button class="filter-chip active" data-category="all">All</button>
+              <button class="filter-chip" data-category="word">Word of the Week</button>
+              <button class="filter-chip" data-category="idiom">Idiom of the Week</button>
+              <button class="filter-chip" data-category="grammar">Grammar Tip</button>
+              <button class="filter-chip" data-category="vocabulary">Vocabulary Builder</button>
+              <button class="filter-chip" data-category="speaking">Speaking Tips</button>
+              <button class="filter-chip" data-category="pronunciation">Pronunciation Tips</button>
+              <button class="filter-chip" data-category="presentation">Presentation Skills</button>
+              <button class="filter-chip" data-category="public-speaking">Public Speaking</button>
+              <button class="filter-chip" data-category="email">Email Writing</button>
+              <button class="filter-chip" data-category="group-discussion">Group Discussion</button>
+              <button class="filter-chip" data-category="interview">Interview Tips</button>
+              <button class="filter-chip" data-category="focus">This Week's Focus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="row g-4" id="cards-grid">
+      <!-- Cards will be dynamically rendered here by JavaScript -->
+    </div>
+
+    <!-- Pagination Load More -->
+    <div class="load-more-container" id="load-more-wrap">
+      <button class="btn-aelc btn-primary-aelc" id="load-more-btn">Load More <i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-aelc">
+  <div class="container-aelc">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="aelc-brand mb-3"><img src="assets/img/logo.jpeg" alt="AELC"><span class="aelc-brand-text"><b>AELC</b><span>Ramco Institute of Technology</span></span></div>
+        <p style="font-size:.9rem;">Advanced English Learners' Club — building communicators, speakers and leaders since our founding as the English Enhancement League.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="executive-committee.html">Committee</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+          <li><a href="communication-hub.html">Comm. Hub</a></li>
+          <li><a href="mock-interview.html">Mock Interview</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Contact</h5>
+        <ul>
+          <li><i class="fa-solid fa-location-dot me-2"></i> Ramco Institute of Technology, Rajapalayam, Tamil Nadu</li>
+          <li><i class="fa-solid fa-envelope me-2"></i> aelc@ritrjpm.ac.in</li>
+          <li><i class="fa-solid fa-phone me-2"></i> +91 00000 00000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Advanced English Learners' Club, Ramco Institute of Technology. All rights reserved.</span>
+      <span>Formerly English Enhancement League</span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hubData = [
+    // 1. Word of the Week (13 items)
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Ephemeral", content: "Lasting for a very short time. <em>“Fame on social media can be ephemeral.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Loquacious", content: "Tending to talk a great deal; talkative. <em>“The loquacious host kept the audience entertained throughout the evening.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Meticulous", content: "Showing great attention to detail; very careful and precise. <em>“She was meticulous about keeping her workspace clean.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Pragmatic", content: "Dealing with things realistically based on practical considerations. <em>“We need to take a pragmatic approach to solve this issue.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Quintessential", content: "Representing the most perfect or typical example of a quality. <em>“A cup of hot tea is the quintessential British beverage.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Resilient", content: "Able to withstand or recover quickly from difficult conditions. <em>“The local economy has proven remarkably resilient.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Superfluous", content: "Unnecessary, especially through being more than enough. <em>“Avoid adding superfluous details that might distract the reader.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Ubiquitous", content: "Present, appearing, or found everywhere. <em>“Smartphones have become ubiquitous in modern society.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Venerable", content: "Accorded a great deal of respect, especially because of age or wisdom. <em>“The venerable institution has educated generations of scholars.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Zealot", content: "A person who is fanatical in pursuit of their ideals. <em>“He was a zealot for clean energy and recycling.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Alacrity", content: "Brisk and cheerful readiness. <em>“She accepted the new job offer with alacrity.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Cacophony", content: "A harsh, discordant mixture of sounds. <em>“The street market was a cacophony of vendors shouting.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Eloquence", content: "Fluent or persuasive in speaking or writing. <em>“His eloquent speech moved the entire crowd to tears.”</em>" },
+
+    // 2. Idiom of the Week (13 items)
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Break the ice", content: "To initiate conversation in a social setting. <em>“He told a joke to break the ice.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Bite the bullet", content: "Face a difficult situation with courage and endurance. <em>“I decided to bite the bullet and tell him the truth.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Burn the midnight oil", content: "To work or study late into the night. <em>“She had to burn the midnight oil to prepare for the final exam.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Call it a day", content: "Decide to stop working on something for the day. <em>“We've made good progress, let's call it a day.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Cry over spilled milk", content: "Complain about a loss from the past that cannot be changed. <em>“It's done now, there's no point crying over spilled milk.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Hit the nail on the head", content: "Describe exactly what is causing a situation or problem. <em>“Your analysis of the sales decline hit the nail on the head.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Let the cat out of the bag", content: "Reveal a secret carelessly or by mistake. <em>“We wanted it to be a surprise, but Sarah let the cat out.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Miss the boat", content: "Lose an opportunity by being too slow to act. <em>“If you don't apply for the scholarship now, you might miss the boat.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Once in a blue moon", content: "Very rarely. <em>“He visits his hometown once in a blue moon due to his busy schedule.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Spill the beans", content: "Reveal secret information. <em>“Who spilled the beans about the surprise party?”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Take with a grain of salt", content: "View something with skepticism or not interpret it literally. <em>“Take his predictions with a grain of salt.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Under the weather", content: "Feeling slightly sick or unwell. <em>“I'm feeling a bit under the weather today, so I'll work from home.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Blessing in disguise", content: "An apparent misfortune that eventually has good results. <em>“Losing that job was a blessing in disguise.”</em>" },
+
+    // 3. Grammar Tip (13 items)
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Fewer vs. Less", content: "Use “fewer” for countable nouns and “less” for uncountable amounts. <em>“Fewer cars mean less traffic.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Their vs. There vs. They're", content: "'Their' is possessive, 'there' refers to place, and 'they're' is 'they are'. <em>“They're going to put their bags there.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Its vs. It's", content: "'Its' is possessive, 'it's' is 'it is'. <em>“The dog wagged its tail because it's happy.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Who vs. Whom", content: "Use 'who' as a subject pronoun (he/she) and 'whom' as an object pronoun (him/her). <em>“Who wrote the letter?” vs “To whom was it sent?”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Affect vs. Effect", content: "'Affect' is usually a verb (to influence), 'effect' is usually a noun (the result). <em>“The weather affects my mood, but the change has a good effect.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Me vs. I", content: "Use 'I' as a subject and 'me' as an object. <em>“My friend and I went to the store, and the cashier helped us.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Continuous vs. Continual", content: "'Continuous' means without stopping; 'continual' means happening repeatedly with gaps. <em>“The continuous hum of the server; the continual alerts.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "May vs. Can", content: "'May' asks for permission, 'can' expresses ability. <em>“May I ask a question? Yes, you can speak now.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Active Voice", content: "Use active voice to make sentences more direct and vigorous. <em>“The team completed the project” is stronger than “The project was completed.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Comma Splices", content: "Avoid joining two independent clauses with just a comma. Use a semicolon or conjunction. <em>“I woke up early; I went for a run.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Subject-Verb Agreement", content: "Singular subjects take singular verbs; plural subjects take plural verbs. <em>“Each of the students has (not have) a book.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Double Negatives", content: "Avoid using two negative words in a single clause. <em>“I don't know nothing” should be “I don't know anything.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Then vs. Than", content: "'Then' relates to time; 'than' is used for comparison. <em>“I went home, and then I realized I was taller than him.”</em>" },
+
+    // 4. Vocabulary Builder (13 items)
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Power Words", content: "Swap common words for expressive ones: “very good” for “exceptional”, “very tired” for “exhausted”." },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Mitigate", content: "To make less severe, serious, or painful. <em>“We installed backup generators to mitigate the risk of power outages.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Capricious", content: "Given to sudden changes of mood or behavior. <em>“The capricious weather made planning our outdoor event difficult.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Obsolete", content: "No longer produced or used; out of date. <em>“Floppy disks became obsolete with the advent of USB drives.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Plausible", content: "Seeming reasonable or probable. <em>“He offered a plausible explanation for his absence.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Prerequisite", content: "A thing that is required as a prior condition. <em>“Good communication is a prerequisite for successful teamwork.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Scrutinize", content: "Examine or inspect closely and thoroughly. <em>“The auditors will scrutinize every financial transaction.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Tenacious", content: "Tending to keep a firm hold of something; persistent. <em>“She was tenacious in pursuing her career goals.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Vague", content: "Of uncertain, indefinite, or unclear character. <em>“His instructions were too vague to be useful.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Euphemism", content: "A mild or indirect word substituted for one considered too harsh. <em>“'Passing away' is a common euphemism for dying.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Hyperbole", content: "Exaggerated statements not meant to be taken literally. <em>“Saying 'I've told you a million times' is hyperbole.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Oxymoron", content: "A figure of speech in which contradictory terms appear in conjunction. <em>“'Deafening silence' is an oxymoron.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Neologism", content: "A newly coined word or expression. <em>“'Selfie' was once a neologism, but now it is part of everyday vocabulary.”</em>" },
+
+    // 5. Speaking Tips (13 items)
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Pause, Don't Filler", content: "Replace “um” and “uh” with a deliberate pause — it reads as confidence." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "The 3-Second Rule", content: "Pause for three seconds before answering a question during presentations to gather your thoughts." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Vary Your Pitch", content: "Avoid monotone delivery by raising your pitch for excitement and lowering it for serious points." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Pacing", content: "Speak at 130-150 words per minute. Speaking too fast conveys nervousness; speaking too slow loses attention." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Project Your Voice", content: "Speak from your diaphragm, not your throat, to project your voice naturally." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Eye Contact Grid", content: "Divide the room into quadrants and make eye contact with one person in each quadrant." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Smile While Speaking", content: "Smiling slightly makes your voice sound warmer and more approachable." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Check Your Breathing", content: "Deep diaphragmatic breathing reduces the physiological symptoms of public speaking anxiety." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Mirroring", content: "Subtly match the posture and speaking rate of your conversational partner to build rapport." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Use Active Verbs", content: "Active verbs carry more energy and keep your spoken stories engaging." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Chunking", content: "Group words into meaningful phrases separated by brief pauses to improve comprehension." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Record Yourself", content: "Record your speeches to identify filler words, repetitive gestures, or pacing issues." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Avoid Uptalk", content: "Do not end statements with a rising intonation, as it makes statements sound like questions." },
+
+    // 6. Pronunciation Tips (13 items)
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Stress the Right Syllable", content: "Word stress changes meaning: REcord (noun) vs. reCORD (verb)." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Schwa Sound (\u0259)", content: "The schwa is the most common vowel sound in English, occurring in unstressed syllables like the 'a' in 'about'." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Silent Letters", content: "Be careful with silent letters in words like 'debt' (det), 'subtle' (sut-l), and 'receipt' (re-seet)." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Vowel Length", content: "Pay attention to vowel length differences between words like 'ship' (short i) and 'sheep' (long ee)." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Liaison / Connected Speech", content: "In natural speech, words connect. <em>“Not at all” sounds like “no-ta-tall”.</em>" },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "The 'Th' Sounds", content: "Practice the voiceless 'th' in 'think' vs. the voiced 'th' in 'this' to avoid sounding like 't' or 'd'." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Flap 'T'", content: "In American English, 't' between vowels often sounds like a quick 'd'. <em>“Water” sounds like “wader”.</em>" },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Dark 'L' vs Light 'L'", content: "'Light L' is at the start ('light'); 'Dark L' is at the end ('cool') where the tongue tip is lower." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Glottal Stop", content: "A catch in the throat that replaces 't' in casual speech. <em>“Button” can sound like “buh-uhn”.</em>" },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "The 'R' Colored Vowels", content: "Practice words like 'bird', 'nurse', and 'work' where the 'r' modifies the vowel sound." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Word-Final Consonants", content: "Ensure you fully pronounce final consonants (e.g., 'send' vs 'sent') so words aren't cut short." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Intonation Contours", content: "Use falling intonation for statements and Wh-questions, and rising intonation for Yes/No questions." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Aspirated 'P', 'T', 'K'", content: "Pronounce initial 'p', 't', and 'k' with a small puff of air ('pin', 'tin', 'kin') to sound natural." },
+
+    // 7. Presentation Skills (13 items)
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The Rule of Three", content: "Group ideas in threes — audiences remember triads far better than lists." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Visual Hierarchy", content: "Make the most important elements on your slide the largest and most contrast-rich." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The 10-20-30 Rule", content: "A presentation should have no more than 10 slides, last no longer than 20 minutes, and use minimum 30pt font." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Tell a Story", content: "Start your presentation with an anecdote or case study rather than a list of dry facts." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Use Contrast", content: "Contrast dark backgrounds with light text, or vice-versa, to ensure legibility in bright rooms." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Minimize Text", content: "Use slides for visual aids and keywords, not as a teleprompter. Limit to 6 lines of text per slide." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Signposting", content: "Use transitions like “Now let's turn to...”, “Conversely...”, or “To summarize...” to guide the audience." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The B-Key Trick", content: "Press 'B' during a PowerPoint slideshow to turn the screen black and draw focus back to you." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Interactive Q&A", content: "Set expectations early on when questions will be addressed — during or after the presentation." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Handouts Timing", content: "Distribute handouts after your presentation so the audience doesn't read them instead of listening to you." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Body Language", content: "Stand with your feet shoulder-width apart and keep your arms open to appear confident and receptive." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Use Props", content: "Physical objects or live demonstrations are highly memorable compared to slide decks." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The Hook", content: "Open with a surprising statistic or a strong quote to capture attention in the first 30 seconds." },
+
+    // 8. Public Speaking (13 items)
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Own the Pause", content: "A silence before your key point makes the audience lean in." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Anxiety Reframe", content: "Reframe nervous energy as excitement. Physically, they feel identical; mentally, excitement is positive." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "The Pep Talk", content: "Speak to yourself positively before walking on stage to boost your confidence levels." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Audience Persona", content: "Tailor your language, examples, and humor to the specific demographics and expertise of your audience." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Move with Purpose", content: "Walk to a new position on stage when transitioning points; stand still when delivering key messages." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Vocal Variety", content: "Change your volume, speed, and pitch to match the emotional tone of your message." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Use Metaphors", content: "Connect complex concepts to familiar ideas using metaphors to make them immediately understandable." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "The Power of 'You'", content: "Address the audience directly using pronouns like 'you' and 'your' to make them feel involved." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Gestures Above Waist", content: "Keep hand gestures natural, open, and above your waist to convey confidence." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Humor Wisely", content: "Use self-deprecating humor or relevant anecdotes; avoid controversial topics or forced jokes." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Call to Action (CTA)", content: "End your speech with a clear, inspiring action you want the audience to take." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Handle Hecklers", content: "Maintain eye contact, answer politely, and offer to discuss the matter privately after the session." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Anchor Technique", content: "Focus your gaze on three friendly faces in different parts of the audience to ground yourself." },
+
+    // 9. Email Writing (13 items)
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Subject Lines Matter", content: "Keep subject lines under 8 words and specific to the ask." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "The BLUF Method", content: "Bottom Line Up Front. Put the main point or request in the first two sentences of the email." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Keep it Scannable", content: "Use bullet points, bold headings, and short paragraphs of 3 lines or less to make emails easy to read." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Tone Check", content: "Read your email aloud before sending to ensure it sounds polite, professional, and not demanding." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Clear Call to Action", content: "End with a single, clear question or directive. <em>“Could you send the report by Friday at 3 PM?”</em>" },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Avoid 'Reply All' Abuse", content: "Only use 'Reply All' if every recipient absolutely needs to see your response." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Proofread Backwards", content: "Proofread your draft from the bottom up to catch spelling errors your brain might normally skip." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Wait Before Sending", content: "If writing an email while angry or frustrated, save it as a draft and review it after cooling down." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Add Attachments First", content: "Attach files before writing the email body to avoid forgetting them." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "The 'Out of Office' (OOO) Template", content: "Include exact dates of absence, who to contact in your stead, and when you will return." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Email Greeting Etiquette", content: "Match the formality of the recipient's greeting. Use 'Dear [Name]' for formal, 'Hi [Name]' for casual." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Minimize Adverbs", content: "Remove words like 'just', 'really', and 'actually' to make your email sound more decisive." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Use Hyperlinks", content: "Instead of pasting long, ugly URLs, hyperlink the text. <em>“Read the [Project Update](URL).”</em>" },
+
+    // 10. Group Discussion (13 items)
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Build, Don't Repeat", content: "Add a new angle to a point already made instead of repeating it." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Acknowledge and Add", content: "Start by validating another speaker. <em>“That's an interesting point, and to build on that...”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Involve Others", content: "Draw quiet team members into the discussion. <em>“We haven't heard from Rahul yet; what are your thoughts?”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Manage Interruptions", content: "If interrupted, politely say, <em>“If I could just finish this thought, then I'd love to hear your perspective.”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Maintain Neutrality", content: "Avoid taking extreme stands. Show that you can analyze both sides of a complex debate." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Use Structured Frameworks", content: "Organize your points using frameworks like PESTLE (Political, Economic, etc.) or SWOT." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Body Language in GD", content: "Sit straight, lean slightly forward, and nod to show active listening to whoever is speaking." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Time Management", content: "Keep track of the discussion's duration and help steer the group back to the topic if it wanders." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Avoid Emotional Outbursts", content: "Keep your tone professional and objective, even if you disagree strongly with a point." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Paraphrase to Clarify", content: "If the discussion gets confused, summarize consensus. <em>“So, we agree on point A but disagree on point B.”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Bring Data", content: "Back up your assertions with statistics, historical context, or current event examples." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Stay Constructive", content: "Focus on solutions rather than just listing problems or criticisms." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Synthesis Skill", content: "Synthesize multiple viewpoints at the end to demonstrate strong leadership and summary skills." },
+
+    // 11. Interview Tips (13 items)
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "STAR Method", content: "Structure answers as Situation, Task, Action, Result." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Research the Interviewers", content: "Look up your interviewers on LinkedIn to understand their career paths and shared interests." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Prepare Questions", content: "Always have 3 questions ready for the interviewer. <em>“What does success look like in this role?”</em>" },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "The Elevator Pitch", content: "Prepare a 60-second summary of your background, key achievements, and why you are there." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Address Weaknesses", content: "Frame weaknesses as areas you are actively improving, giving a concrete example of your progress." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Dress for Success", content: "Wear professional attire that is one step above the company's daily dress code." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Thank-You Note", content: "Send a personalized thank-you email within 24 hours of the interview to express your continued interest." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Handling 'Tell Me About Yourself'", content: "Structure it as Present (current status), Past (key achievements/skills), and Future (why this role)." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Pause Before Answering", content: "Take a moment to structure your thoughts instead of rushing into a rambling response." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Negotiation Prep", content: "Research market salaries beforehand and let the interviewer bring up compensation first." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Focus on Achievements", content: "Talk about the results of your actions using metrics. <em>“Increased efficiency by 15%.”</em>" },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Be Honest", content: "If you don't know, say, <em>“I don't know the exact answer, but here is how I would go about finding it.”</em>" },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Align with Culture", content: "Read the company's core values page and weave those values into your interview examples." },
+
+    // 12. This Week's Focus (13 items)
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Confidence in Conversation", content: "Practice ordering food, giving directions and small talk — entirely in English." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Active Listening", content: "Focus entirely on the speaker without planning your response while they are talking." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Vocabulary Expansion", content: "Learn three new words every day and use them in a conversation or email before the day ends." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Read Aloud Daily", content: "Spend 10 minutes reading an English newspaper or book aloud to practice your pronunciation and pacing." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Shadowing Technique", content: "Listen to a native English speaker and repeat what they say with a fraction of a second delay." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Write a Journal", content: "Keep a daily journal of 5-10 sentences summarizing your activities to practice writing structure." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Language Swap", content: "Find a partner and spend 30 minutes speaking only in English, correcting each other constructively." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Listen to Podcasts", content: "Listen to educational or interview podcasts in English to adapt to different accents." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Grammar Drills", content: "Take a 10-minute online grammar quiz weekly to identify and correct recurring errors." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Describe Your Day", content: "In your head or aloud to yourself, describe your ongoing actions in English. <em>“Now I am making coffee...”</em>" },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Watch with Subtitles", content: "Watch English movies or shows with English subtitles to match written text with spoken pronunciation." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Think in English", content: "Consciously try to conduct your inner monologue in English for one hour daily." },
+    { category: "focus", badge: "This Week's Focus", icon: "fa-solid fa-graduation-cap", title: "Set SMART Goals", content: "Define a specific goal, like <em>“I will learn 20 business idioms and use them in mock calls.”</em>" },
+
+    // Additional entries to ensure full rich database of ~150-160 items
+    // 13. Extra Words
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Acquiesce", content: "Accept something reluctantly but without protest. <em>“He decided to acquiesce to his supervisor's request.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Banal", content: "So lacking in originality as to be obvious and boring. <em>“The plot of the movie was rather banal.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Candid", content: "Truthful and straightforward; frank. <em>“She gave a candid assessment of the project's failures.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Deference", content: "Humble submission and respect. <em>“He addressed the professor with extreme deference.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Enigma", content: "A person or thing that is mysterious, puzzling, or difficult to understand. <em>“His sudden disappearance remains an enigma.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Fastidious", content: "Very attentive to and concerned about accuracy and detail. <em>“He is fastidious about his personal grooming.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Garrulous", content: "Excessively talkative, especially on trivial matters. <em>“A garrulous neighbor who bent my ear for an hour.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Haughty", content: "Arrogantly superior and disdainful. <em>“She gave them a haughty look and walked away.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Imminent", content: "About to happen; forthcoming. <em>“The dark clouds suggest that a storm is imminent.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Juxtaposition", content: "The fact of two things being seen or placed close together with contrasting effect. <em>“The juxtaposition of light and shadow.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Lethargic", content: "Affected by lethargy; sluggish and apathetic. <em>“I felt tired and lethargic after the long flight.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Magnanimous", content: "Generous or forgiving, especially toward a rival or less powerful person. <em>“She was magnanimous in victory.”</em>" },
+    { category: "word", badge: "Word of the Week", icon: "fa-solid fa-book", title: "Nostalgia", content: "A sentimental longing or wistful affection for the past. <em>“I was overcome with nostalgia when I saw my old school.”</em>" },
+
+    // 14. Extra Idioms
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Bark up wrong tree", content: "Pursue a line of thought or course of action that is misguided. <em>“If you think I'm responsible, you're barking up the wrong tree.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Cry wolf", content: "To call for help when you don't need it, so that people won't believe you when you do. <em>“If you cry wolf too often, nobody will help you.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Cut corners", content: "Do something perfunctorily so as to save time or money. <em>“Don't cut corners on safety precautions.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Devil's advocate", content: "A person who expresses a contentious opinion in order to provoke debate. <em>“Let me play devil's advocate for a moment.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Face the music", content: "Be confronted with the unpleasant consequences of one's actions. <em>“It's time to face the music and admit our error.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Get out of hand", content: "Get out of control. <em>“The demonstration quickly got out of hand.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Go cold turkey", content: "Abruptly and completely stop a habit or dependency. <em>“He stopped smoking cold turkey.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Hold your horses", content: "Wait a moment; slow down. <em>“Hold your horses, we haven't received confirmation yet.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Keep at bay", content: "Prevent someone or something from approaching or having an effect. <em>“Regular exercise helps keep illnesses at bay.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Leave in the lurch", content: "Leave someone in a difficult situation without help. <em>“He resigned suddenly, leaving us in the lurch.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Make ends meet", content: "Earn just enough money to live on. <em>“With rising prices, it's hard to make ends meet.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "On the fence", content: "Undecided or uncommitted between two options. <em>“I'm still on the fence about which course to take.”</em>" },
+    { category: "idiom", badge: "Idiom of the Week", icon: "fa-solid fa-quote-left", title: "Rule of thumb", content: "A broadly accurate guide or principle, based on practice. <em>“A good rule of thumb is to save 20% of your income.”</em>" },
+
+    // 15. Extra Grammar Tips
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Adjective Order", content: "Adjectives follow a strict order: Opinion, Size, Age, Shape, Color, Origin, Material, Purpose. <em>“A beautiful, small, old, round, red, Italian, wooden dining table.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Either/Or, Neither/Nor", content: "Use 'either' with 'or' and 'neither' with 'nor'. The verb agrees with the closer subject. <em>“Neither the teacher nor the students were there.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Collective Nouns", content: "Collective nouns (team, staff, family) are usually singular in American English but can be plural in British English. <em>“The team is playing well.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Lay vs. Lie", content: "'Lay' requires a direct object (to put down); 'lie' does not (to recline). <em>“Please lay the books on the table; I want to lie down.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Bring vs. Take", content: "Use 'bring' for movement toward the speaker; use 'take' for movement away. <em>“Bring me that file, and take this letter to the post office.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Accept vs. Except", content: "'Accept' is a verb meaning to receive; 'except' is a preposition meaning excluding. <em>“I accept the invitation, except for the dinner part.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Adverb Placement", content: "Avoid placing adverbs between a verb and its object. <em>“He wrote the letter quickly” (not “He wrote quickly the letter”).</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Alot vs. A lot", content: "'Alot' is not a word. Always write it as two words: 'a lot'. <em>“I have a lot of books.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Complement vs. Compliment", content: "'Complement' means to add to or make complete; 'compliment' is an expression of praise. <em>“Her scarf complements her coat; he gave her a nice compliment.”</em>" },
+    { category: "grammar", badge: "Grammar Tip", icon: "fa-solid fa-spell-check", title: "Disinterested vs. Uninterested", content: "'Disinterested' means impartial or unbiased; 'uninterested' means not caring or bored. <em>“We need a disinterested judge; he was uninterested in the topic.”</em>" },
+
+    // 16. Extra Vocab Builders
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Anachronism", content: "A thing belonging or appropriate to a period other than that in which it exists. <em>“A sword in a modern office is an anachronism.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Brevity", content: "Concise and exact use of words in writing or speech. <em>“For the sake of brevity, I will summarize the key points.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Cognizant", content: "Having knowledge or being aware of. <em>“We must be cognizant of our budget constraints.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Disparate", content: "Essentially different in kind; not allowing comparison. <em>“The two cultures have disparate views on time management.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Equivocal", content: "Open to more than one interpretation; ambiguous. <em>“The politician gave an equivocal answer to the question.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Facetious", content: "Treating serious issues with deliberately inappropriate humor. <em>“I was just being facetious when I said I would quit.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Gratuitous", content: "Given or done free of charge, or uncalled for. <em>“The movie contained gratuitous violence.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Inherent", content: "Existing in something as a permanent, essential, or characteristic attribute. <em>“There are inherent risks in any business venture.”</em>" },
+    { category: "vocabulary", badge: "Vocabulary Builder", icon: "fa-solid fa-layer-group", title: "Lucid", content: "Expressed clearly; easy to understand. <em>“His explanation was lucid and logical.”</em>" },
+
+    // 17. Extra Speaking Tips
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "The 'But-Cut' Rule", content: "Avoid using 'but' after giving a compliment, as it cancels the praise. Use 'and' or pause instead." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Audience Interaction", content: "Ask rhetorical or poll questions to keep the audience engaged. <em>“How many of you have faced this?”</em>" },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Hand Gestures", content: "Keep your hands out of your pockets and avoid crossing your arms, as it conveys a closed attitude." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Voice Modulation", content: "Whisper for intimacy or secrecy, and raise volume slightly for excitement or call to actions." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Open Posture", content: "Stand with your palms facing slightly upward and arms open to appear honest and welcoming." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Pacing Complex Points", content: "Slow down when explaining complex data or statistics to give the audience time to absorb them." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Vocal Resonance", content: "Hum for a few seconds before speaking to place your voice in the warm chest resonance area." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Avoiding Apologies", content: "Do not open with an apology like 'Sorry, I didn't have time to prepare,' as it lowers expectations." },
+    { category: "speaking", badge: "Speaking Tips", icon: "fa-solid fa-comments", title: "Storytelling Arc", content: "Start with a problem, describe the journey/struggle, and end with the solution/lessons learned." },
+
+    // 18. Extra Pronunciation Tips
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Flapped D/T sound", content: "In standard American English, 't' and 'd' between vowels are pronounced as a flap. <em>“Writer” and “rider” sound identical.</em>" },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Silent 'H'", content: "Do not pronounce 'h' in words like 'honest', 'hour', 'honor', and 'herb' (American pronunciation)." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "W vs V Pronunciation", content: "For 'W', round your lips (like 'water'); for 'V', touch top teeth to bottom lip (like 'very')." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Voiced Consonant Ends", content: "Make sure to pronounce voiced consonant endings fully (e.g., 'dog' with a soft 'g', not a 'k' sound)." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Linking 'R'", content: "In British English, the 'r' at the end of a word is pronounced if the next word starts with a vowel: <em>“Far away”.</em>" },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Ought/Bought Vowels", content: "Practice the rounded 'aw' sound in words like 'thought', 'caught', 'law', and 'daughter'." },
+    { category: "pronunciation", badge: "Pronunciation Tips", icon: "fa-solid fa-microphone", title: "Contractions Rhythm", content: "Using contractions like 'I'd', 'we're', and 'don't' is crucial for matching natural English sentence rhythm." },
+
+    // 19. Extra Presentation Skills
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The Grid Method", content: "Align slide elements to a 3x3 grid to ensure visual balance and clear spacing." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Color Psychology", content: "Use blue for trust, red for urgency, green for growth, and gold for premium quality." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Visual Metaphors", content: "Use an image of a bridge to represent transitions, or a puzzle for complex problems, instead of text lists." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Slide Typography", content: "Limit slide fonts to two: one bold font for headers, and a clean sans-serif for body text." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "Presenter View", content: "Configure presenter view on your monitor so you can see upcoming slides and notes." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "High-Quality Assets", content: "Never use watermarked, low-resolution images; use stock photos or custom assets instead." },
+    { category: "presentation", badge: "Presentation Skills", icon: "fa-solid fa-display", title: "The 5-Second Rule", content: "An audience member should be able to understand the core message of a slide in 5 seconds." },
+
+    // 20. Extra Public Speaking
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Room Setup Check", content: "Arrive 30 minutes early to check mic audio levels, projector brightness, and clicker battery." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Visualizing Success", content: "Spend 5 minutes before your speech visualizing the audience clapping and a successful delivery." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Open Hand Gestures", content: "Keep your palms facing up to suggest honesty, trust, and transparency." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Vocal Breathing", content: "Breathe slowly in through your nose and out through your mouth to relax vocal cords." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "Microphone Technique", content: "Keep the mic 2-3 inches from your mouth and speak across it, not directly into it, to avoid pop sounds." },
+    { category: "public-speaking", badge: "Public Speaking", icon: "fa-solid fa-bullhorn", title: "The Call to Action", content: "Close with a memorable sentence or challenge. <em>“What will you change today?”</em>" },
+
+    // 21. Extra Email Writing
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Use Bold Sparingly", content: "Bold key deadlines or actions (e.g. <b>Friday, Oct 12</b>) so they stand out immediately." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Acknowledge Receipts", content: "If busy, send a quick note: <em>“Received, will review and get back to you by Wednesday.”</em>" },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Professional Sign-Off", content: "Use 'Best regards,' or 'Sincerely,' instead of overly casual ones like 'Cheers' in formal emails." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "Keep Threads Intact", content: "Reply to existing threads to maintain historical context instead of starting fresh blank emails." },
+    { category: "email", badge: "Email Writing", icon: "fa-solid fa-envelope", title: "The 'Five-Sentence' Rule", content: "Try to keep regular correspondence emails under five sentences to respect the reader's time." },
+
+    // 22. Extra GD Tips
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Eye Contact GD", content: "Maintain eye contact with all participants in the discussion group, not just the evaluator." },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Consensus Building", content: "Help the group reach a common ground by summarizing: <em>“We agree on X, so let's focus on Y.”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Handling Disagreement", content: "Disagree politely: <em>“I understand your perspective, however, another angle to consider is...”</em>" },
+    { category: "group-discussion", badge: "Group Discussion", icon: "fa-solid fa-people-group", title: "Clear Delivery", content: "Speak with moderate speed and clear articulation so everyone in the circle can hear you." },
+
+    // 23. Extra Interview Tips
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "The Post-Interview Note", content: "Send a brief thank-you email within 24 hours of the interview, highlighting a key topic discussed." },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Handling Curveballs", content: "If asked a bizarre question, show your thought process instead of panicking. <em>“That's interesting; I would approach it by...”</em>" },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Highlighting Metrices", content: "Quantify your achievements. <em>“Managed a team of 5, delivering projects 10% ahead of schedule.”</em>" },
+    { category: "interview", badge: "Interview Tips", icon: "fa-solid fa-briefcase", title: "Active Listening", content: "Listen carefully to the interviewer's entire question before formulating your response." }
+  ];
+
+  const cardsPerPage = 12;
+  let currentPage = 0;
+  let filteredData = [...hubData];
+
+  const cardsGrid = document.getElementById('cards-grid');
+  const searchInput = document.getElementById('hub-search');
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const loadMoreWrap = document.getElementById('load-more-wrap');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  let activeCategory = 'all';
+
+  function renderCards(append = false) {
+    if (!append) {
+      cardsGrid.innerHTML = '';
+    }
+
+    const start = currentPage * cardsPerPage;
+    const end = start + cardsPerPage;
+    const pageItems = filteredData.slice(start, end);
+
+    if (filteredData.length === 0) {
+      cardsGrid.innerHTML = `
+        <div class="empty-state" data-aos="fade-up">
+          <i class="fa-solid fa-circle-question"></i>
+          <h4>No items found</h4>
+          <p>We couldn't find any resources matching your search query. Try another term or category!</p>
+        </div>
+      `;
+      loadMoreWrap.style.display = 'none';
+      if (window.AOS) AOS.refresh();
+      return;
+    }
+
+    pageItems.forEach((item, index) => {
+      const col = document.createElement('div');
+      col.className = 'col-md-4 col-sm-6';
+      col.setAttribute('data-aos', 'fade-up');
+      col.setAttribute('data-aos-delay', (index % 3) * 100);
+
+      col.innerHTML = `
+        <div class="card-aelc h-100">
+          <div class="card-icon"><i class="${item.icon}"></i></div>
+          <span class="badge-soft">${item.badge}</span>
+          <h5 class="mt-2">${item.title}</h5>
+          <p style="font-size:.9rem;">${item.content}</p>
+        </div>
+      `;
+      cardsGrid.appendChild(col);
+    });
+
+    // Handle load more button visibility
+    if (end >= filteredData.length) {
+      loadMoreWrap.style.display = 'none';
+    } else {
+      loadMoreWrap.style.display = 'flex';
+    }
+
+    // Refresh AOS animations
+    if (window.AOS) {
+      AOS.refresh();
+    }
+  }
+
+  function filterAndSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    
+    filteredData = hubData.filter(item => {
+      const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+      const matchesSearch = item.title.toLowerCase().includes(query) || 
+                            item.badge.toLowerCase().includes(query) || 
+                            item.content.toLowerCase().includes(query);
+      return matchesCategory && matchesSearch;
+    });
+
+    currentPage = 0;
+    renderCards(false);
+  }
+
+  // Category filter click event
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      activeCategory = chip.dataset.category;
+      filterAndSearch();
+    });
+  });
+
+  // Search input event
+  searchInput.addEventListener('input', filterAndSearch);
+
+  // Load more click event
+  loadMoreBtn.addEventListener('click', () => {
+    currentPage++;
+    renderCards(true);
+  });
+
+  // Initial render
+  renderCards(false);
+});
+</script>
+</body>
+</html>
