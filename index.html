@@ -87,53 +87,6 @@
 </div>
 <style>.search-modal.open{display:flex !important;}</style>
 
-<!-- ================= SPOTLIGHT '26 EVENT POPUP ================= -->
-<style>
-.event-popup-overlay{position:fixed;inset:0;background:rgba(10,10,15,.78);backdrop-filter:blur(6px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;}
-.event-popup-overlay.open{display:flex;}
-.event-popup-card{position:relative;max-width:460px;width:100%;background:var(--charcoal,#1a1a1a);border:1px solid rgba(201,182,156,.4);border-radius:20px;padding:36px 32px;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.55);max-height:90vh;overflow-y:auto;}
-.event-popup-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
-.event-popup-close:hover{background:rgba(255,255,255,.18);}
-.event-popup-header{text-align:center;margin-bottom:20px;}
-.event-popup-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:2rem;letter-spacing:.02em;margin:14px 0 6px;color:var(--beige-dark,#c9b69c);}
-.event-popup-date{font-size:.9rem;color:rgba(255,255,255,.8);margin-bottom:4px;}
-.event-popup-date i{margin-right:6px;}
-.event-popup-tagline{font-style:italic;font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:0;}
-.event-popup-body{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
-.event-popup-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 16px;}
-.event-popup-item h6{font-family:'Poppins';font-weight:600;margin-bottom:4px;font-size:.95rem;color:#fff;}
-.event-popup-item h6 i{margin-right:8px;color:var(--beige-dark,#c9b69c);}
-.event-popup-item p{font-size:.8rem;color:rgba(255,255,255,.65);margin:0;}
-.event-popup-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
-.event-popup-actions .btn-aelc{flex:1;min-width:150px;text-align:center;justify-content:center;}
-@media(max-width:480px){.event-popup-card{padding:30px 22px;}.event-popup-title{font-size:1.6rem;}}
-</style>
-<div class="event-popup-overlay" id="eventPopupOverlay">
-  <div class="event-popup-card">
-    <button class="event-popup-close" id="eventPopupClose" aria-label="Close popup"><i class="fa-solid fa-xmark"></i></button>
-    <div class="event-popup-header">
-      <span class="hero-badge"><i class="fa-solid fa-masks-theater"></i> Upcoming Event</span>
-      <h2 class="event-popup-title">SPOTLIGHT '26</h2>
-      <p class="event-popup-date"><i class="fa-solid fa-calendar-days"></i>25th July 2026</p>
-      <p class="event-popup-tagline">Ignite the Stage. Inspire the World.</p>
-    </div>
-    <div class="event-popup-body">
-      <div class="event-popup-item">
-        <h6><i class="fa-solid fa-masks-theater"></i>Echoes Beyond Ages</h6>
-        <p>Theme: Characters Who Inspire &middot; Team of 3–5 &middot; 5–7 mins</p>
-      </div>
-      <div class="event-popup-item">
-        <h6><i class="fa-solid fa-recycle"></i>Voiceless Voices (Mime)</h6>
-        <p>Theme: Waste Not, Want Not &middot; Team of 4–8 &middot; 4–6 mins</p>
-      </div>
-    </div>
-    <div class="event-popup-actions">
-      <a href="https://forms.gle/457uobU5QXZG19P27" target="_blank" rel="noopener" class="btn-aelc btn-gold-aelc">Register Now <i class="fa-solid fa-arrow-right"></i></a>
-      <button class="btn-aelc btn-outline-aelc" id="eventPopupDismiss" type="button">Maybe Later</button>
-    </div>
-  </div>
-</div>
-
 <!-- ================= HERO ================= -->
 <header class="hero-aelc">
   <div class="hero-particles"></div>
@@ -612,35 +565,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script>
-(function(){
-  var overlay = document.getElementById('eventPopupOverlay');
-  if(!overlay) return;
-  var closeBtn = document.getElementById('eventPopupClose');
-  var dismissBtn = document.getElementById('eventPopupDismiss');
-  var seenKey = 'aelc_spotlight26_popup_seen';
-
-  function openPopup(){
-    overlay.classList.add('open');
-  }
-  function closePopup(){
-    overlay.classList.remove('open');
-    sessionStorage.setItem(seenKey, '1');
-  }
-
-  if(!sessionStorage.getItem(seenKey)){
-    setTimeout(openPopup, 900);
-  }
-
-  closeBtn.addEventListener('click', closePopup);
-  dismissBtn.addEventListener('click', closePopup);
-  overlay.addEventListener('click', function(e){
-    if(e.target === overlay) closePopup();
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && overlay.classList.contains('open')) closePopup();
-  });
-})();
-</script>
 </body>
 </html>
