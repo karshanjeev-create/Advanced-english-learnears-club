@@ -764,3 +764,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   object-position:center;
   background:#969696;
 }
+
+/* Live badge pulse animation */
+@keyframes live-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+.live-badge {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #ff4d4d !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+}
+.live-badge::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: live-pulse 2s infinite;
+}
