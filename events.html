@@ -70,30 +70,34 @@
       <h2 class="section-title title-stroke">Ongoing Event</h2>
       <p class="section-sub mx-auto">Currently running event on the AELC calendar — join in and stay tuned.</p>
     </div>
-    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+    <div class="row g-4">
+
+      <div class="col-lg-6 mx-auto" data-aos="fade-up" data-aos-delay="0">
         <div class="card-aelc" style="padding:0; overflow:hidden;">
-          <img class="event-card-image" src="assets\img\26-27\Uncharted.jpg" alt="Uncharted">
-          <div style="padding:24px;">
-            <span class="badge-soft">Scavenger Hunt</span>
-            <h5 class="mt-3 mb-2">Uncharted</h5>
-            <p style="font-size:.85rem; margin-bottom:6px;"><i class="fa-regular fa-calendar me-2"></i>Ongoing (August 2026)</p>
-            <p style="font-size:.85rem;"><i class="fa-solid fa-location-dot me-2"></i>Campus-wide</p>
-            <a href="#" class="btn-aelc view-details-link" style="padding:0; color:var(--accent-text); font-size:.85rem;"
-               data-bs-toggle="modal" data-bs-target="#evModal"
-               data-category="Scavenger Hunt"
-               data-title="Uncharted (Scavenger Hunt)"
-               data-date="Ongoing (Starting August 2026)"
-               data-venue="Campus-wide"
-               data-highlight="Ongoing Event"
-               data-objective="To foster teamwork, critical thinking, and rapid problem-solving through a large-scale, interactive campus-wide scavenger hunt."
-               data-description="Teams follow cryptic verbal and logical clues scattered across different campus landmarks, testing their collaboration and deduction skills."
-               data-outcome="Ongoing - participants are actively solving the initial stages and navigating clues across the campus."
-               data-feedback="https://docs.google.com/forms/d/e/1FAIpQLSfL0MTy-qANdnDWIsL8KrbyD4uA4ngfMHsebW_0kKcskvZROw/viewform?usp=dialog"
-               data-image="assets\img\26-27\Uncharted.jpg">View Details <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="row g-0 h-100">
+            <div class="col-4">
+              <img class="event-card-image" src="assets\img\26-27\Uncharted.jpg" alt="Uncharted">
+            </div>
+            <div class="col-8 d-flex flex-column justify-content-center" style="padding:24px;">
+              <span class="badge-soft" style="width:fit-content;">Scavenger Hunt &nbsp;•&nbsp; Ongoing</span>
+              <h5 class="mt-3 mb-2">Uncharted</h5>
+              <p style="font-size:.85rem; margin-bottom:6px;"><i class="fa-regular fa-calendar me-2"></i>August 2026 – Present</p>
+              <p style="font-size:.85rem; margin-bottom:14px;"><i class="fa-solid fa-location-dot me-2"></i>Campus-wide</p>
+              <a href="#" class="btn-aelc btn-gold-aelc" style="padding:10px 22px; width:fit-content;"
+                 data-bs-toggle="modal" data-bs-target="#evModal"
+                 data-category="Scavenger Hunt"
+                 data-title="Uncharted (Scavenger Hunt)"
+                 data-date="Ongoing (Starting August 2026)"
+                 data-venue="Campus-wide"
+                 data-highlight="Ongoing Event"
+                 data-objective="To foster teamwork, critical thinking, and rapid problem-solving through a large-scale, interactive campus-wide scavenger hunt."
+                 data-description="Teams follow cryptic verbal and logical clues scattered across different campus landmarks, testing their collaboration and deduction skills."
+                data-feedback="https://docs.google.com/forms/d/e/1FAIpQLSfL0MTy-qANdnDWIsL8KrbyD4uA4ngfMHsebW_0kKcskvZROw/viewform?usp=dialog"
+                 data-image="assets\img\26-27\Uncharted.jpg">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
@@ -154,6 +158,7 @@
                data-objective="To foster teamwork, critical thinking, and rapid problem-solving through a large-scale, interactive campus-wide scavenger hunt."
                data-description="Teams follow cryptic verbal and logical clues scattered across different campus landmarks, testing their collaboration and deduction skills."
                data-outcome="Ongoing - participants are actively solving the initial stages and navigating clues across the campus."
+               data-feedback="https://docs.google.com/forms/d/e/1FAIpQLSfL0MTy-qANdnDWIsL8KrbyD4uA4ngfMHsebW_0kKcskvZROw/viewform?usp=dialog"
                data-image="assets\img\26-27\Uncharted.jpg">View Details <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
@@ -1355,10 +1360,10 @@
 
 <div class="modal fade" id="evModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" style="border-radius:20px; border:none;">
+    <div class="modal-content" style="border-radius:20px; border:none; overflow:hidden;">
       <div class="ph-image evModalImage" style="border-radius:20px 20px 0 0; aspect-ratio:21/9;"><i class="fa-regular fa-image"></i></div>
       <div class="modal-body p-4">
-        <button type="button" class="btn-close position-absolute" style="top:20px; right:20px;" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close position-absolute" style="top:20px; right:20px; z-index:10;" data-bs-dismiss="modal"></button>
         <span class="badge-soft evModalCategory">Workshop</span>
         <h4 class="mt-3 evModalTitle">Event Title</h4>
         <div class="row g-3 my-3">
@@ -1374,7 +1379,34 @@
         <p class="evModalDescription">Full description migrated from the original site will appear here.</p>
         <h6>Outcome</h6>
         <p class="evModalOutcome">Outcomes and learnings from the event.</p>
-        <a href="#" class="btn-aelc btn-primary-aelc mt-2 evModalReport" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download Report</a>
+
+        <!-- Dynamic Feedback Container -->
+        <div class="evModalFeedbackWrap mt-4 p-3 rounded-4" style="display:none; background: var(--surface-2); border: 1px solid var(--accent); border-left: 5px solid var(--accent-strong);">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+            <h6 class="m-0 fw-bold" style="color: var(--ink);"><i class="fa-solid fa-comments me-2 text-warning"></i>Event Feedback</h6>
+            <span class="badge bg-success bg-opacity-75" style="font-size:0.75rem;"><i class="fa-solid fa-circle-dot me-1"></i>Feedback Form Active</span>
+          </div>
+          <p class="small mb-3" style="color: var(--muted);">We value your thoughts! Please rate and share your feedback for this live session.</p>
+          
+          <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
+            <a href="#" class="btn-aelc btn-primary-aelc evModalFeedbackBtn" target="_blank" rel="noopener" style="font-size:0.85rem; padding: 8px 18px;">
+              <i class="fa-solid fa-paper-plane me-1"></i> Give Feedback (Google Form)
+            </a>
+            <button type="button" class="btn btn-sm btn-outline-secondary toggle-feedback-embed" style="border-radius: 20px; font-size:0.82rem; padding: 6px 14px;">
+              <i class="fa-solid fa-eye me-1"></i> Toggle Form Preview
+            </button>
+          </div>
+
+          <div class="feedback-embed-container mt-3" style="display:none;">
+            <div class="ratio ratio-16x9" style="min-height: 420px;">
+              <iframe class="evModalFeedbackIframe" src="" style="border-radius:12px; border:1px solid var(--card-border); background:#fff;" title="Google Form Feedback">Loading form…</iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a href="#" class="btn-aelc btn-primary-aelc evModalReport" target="_blank" rel="noopener" style="display:none;"><i class="fa-solid fa-download"></i> Download Report</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1471,6 +1503,30 @@
         reportBtn.style.display = 'none';
       }
 
+      // Feedback handling
+      var feedbackWrap = evModal.querySelector('.evModalFeedbackWrap');
+      var feedbackBtn = evModal.querySelector('.evModalFeedbackBtn');
+      var feedbackIframe = evModal.querySelector('.evModalFeedbackIframe');
+      var feedbackEmbedContainer = evModal.querySelector('.feedback-embed-container');
+      var toggleBtn = evModal.querySelector('.toggle-feedback-embed');
+
+      if (data.feedback && data.feedback.trim() !== '') {
+        if (feedbackWrap) feedbackWrap.style.display = 'block';
+        if (feedbackBtn) feedbackBtn.href = data.feedback;
+
+        var formUrl = data.feedback;
+        var embedUrl = formUrl;
+        if (formUrl.includes('docs.google.com/forms') && !formUrl.includes('embedded=true')) {
+          embedUrl += (formUrl.includes('?') ? '&' : '?') + 'embedded=true';
+        }
+        if (feedbackIframe) feedbackIframe.src = embedUrl;
+      } else {
+        if (feedbackWrap) feedbackWrap.style.display = 'none';
+        if (feedbackIframe) feedbackIframe.src = '';
+        if (feedbackEmbedContainer) feedbackEmbedContainer.style.display = 'none';
+        if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-eye me-1"></i> Toggle Form Preview';
+      }
+
       var imageWrap = evModal.querySelector('.evModalImage');
       if (data.image) {
         imageWrap.style.backgroundImage = "url('" + data.image + "')";
@@ -1482,6 +1538,21 @@
         imageWrap.innerHTML = '<i class="fa-regular fa-image"></i>';
       }
     });
+
+    // Toggle embedded form preview
+    var toggleBtn = evModal.querySelector('.toggle-feedback-embed');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        var embedContainer = evModal.querySelector('.feedback-embed-container');
+        if (embedContainer) {
+          var isHidden = embedContainer.style.display === 'none' || embedContainer.style.display === '';
+          embedContainer.style.display = isHidden ? 'block' : 'none';
+          toggleBtn.innerHTML = isHidden 
+            ? '<i class="fa-solid fa-eye-slash me-1"></i> Hide Form Preview' 
+            : '<i class="fa-solid fa-eye me-1"></i> Toggle Form Preview';
+        }
+      });
+    }
   });
 </script>
 </body>
